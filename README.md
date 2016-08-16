@@ -1,2 +1,2 @@
 # owniz.github.io
-Personal Web
+Personal Blog
