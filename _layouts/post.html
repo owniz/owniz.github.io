@@ -10,7 +10,25 @@ layout: default
     	<h1>{{ page.title }}</h1>
     </div>
     <div class="post__date">
-    	<p>{{ page.date | date: '%B %-d, %Y' }}</p>
+    	<p>
+            {{ page.date | date: '%d de'}}
+            {% assign m = page.date | date: "%-m" %}
+                {% case m %}
+                {% when '1' %}Enero
+                {% when '2' %}Febrero
+                {% when '3' %}Marzo
+                {% when '4' %}Abril
+                {% when '5' %}Mayo
+                {% when '6' %}Junio
+                {% when '7' %}Julio
+                {% when '8' %}Agosto
+                {% when '9' %}Septiembre
+                {% when '10' %}Octubre
+                {% when '11' %}Noviembre
+                {% when '12' %}Diciembre
+                {% endcase %}
+            {{ page.date | date: 'del %Y' }}   
+        </p>
     </div>
     <div class="post__meta">
     	<p>{{ tags_content }}</p>

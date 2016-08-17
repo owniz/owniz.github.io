@@ -26,7 +26,21 @@
 <body>
 
     <div class="wrapper">
-        {{ content }}
+        <div class="header">
+            <a href="/">
+                <img src=../assets/img/logo.png>
+            </a>
+            <h1>{{ site.name }}</h1>
+            <ul>
+                {% for item in site.data.navigation %}
+                <li>
+                    <a href="{{ item.url }}">{{ item.title }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    <hr>
+    {{ content }}
     </div>
 
 </body>

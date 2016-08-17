@@ -5,10 +5,8 @@
 @import "config";
 
 body {
-	color: #bdbdbd;
-	/*color: $color-white;*/
+	color: $color-white;
 	background: #424242;
-	/*background: #E6E6E6;*/
 	font-family: 'Inconsolata', ;
 	font-size: 100%;
 	font-weight: 400;
@@ -19,6 +17,39 @@ h1 {
 p {
 	font-size: 1em;
 	line-height: 150%;
+}
+
+table {
+	border-collapse: collapse;
+    border: 2px solid $color-white;
+    
+}
+
+th{
+	background-color: $color-black;
+	vertical-align: middle;
+	font-weight: bold;
+    border: 1px solid $color-white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+td {
+	vertical-align: middle;
+    border: 1px solid $color-white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+blockquote {
+  
+  border-left: 5px solid $color-grey;
+  margin: 1.5em 20px;
+  padding: 0.5em 10px;
 }
 
 .header img {
@@ -151,7 +182,7 @@ ul {
 			padding-right: 10px;
 			padding-bottom: 2px;
 			text-decoration: none;
-			border-bottom: 3px solid $color-black;
+			border-bottom: 2px solid $color-white;
 		}
 	}
 	&__date {
@@ -244,7 +275,7 @@ ul {
 		.codebreak {
 			margin: 15px;
 			border: 0;
-			border-bottom: 1px dashed $color-black;
+			border-bottom: 1px dashed $color-white;
 		}
 	}
 }
