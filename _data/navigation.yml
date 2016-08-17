@@ -1,4 +1,14 @@
-# Site navigation links
+- title: /home
+  url: /
 
-- title: Projects
-  url: /projects/
+- title: /about
+  url: /me
+
+- title: /github
+  url: https://github.com/owniz
+
+- title: /twitter
+  url: https://twitter.com/owniz
+
+- title: /email
+  url: mailto:iam@jmoral.es
