@@ -3,6 +3,9 @@ layout: default
 ---
 
 <div class="header">
+    <a href="/">
+        <img src=assets/img/logo.png>
+    </a>
     <h1>{{ site.name }}</h1>
     <ul>
         {% for item in site.data.navigation %}
@@ -12,18 +15,7 @@ layout: default
         {% endfor %}
     </ul>
 </div>
-<!-- 
-<div class="portfolio">
-    <h1>Web Design:</h1>
-    <ul>
-        {% for websites in site.data.websites %}
-        <li>
-            <a href="{{ websites.url }}">{{ websites.url }}</a>
-        </li>
-        {% endfor %}
-    </ul>
-</div>
--->
+<hr>
 <div class="blog">
     <h1>Blog Posts:</h1>
     <ul>
@@ -34,10 +26,5 @@ layout: default
         {% endfor %}
     </ul>
 </div>
-<!--
-<div class="music">
-    <h1>Now Playing:</h1>
-    <a href="http://www.last.fm/user/getmicah"><span id="nowPlaying"></span></a>
-</div>
--->
+
 <script src="/assets/js/main.js"></script>
