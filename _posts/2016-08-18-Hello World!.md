@@ -75,7 +75,10 @@ Con `<hr class="codebreak">` ponemos esta línea discontinua
 para poner una imagen usamos `![título](/assets/img/kodama.jpg)`
 
 ![texto alternativo](/assets/img/kodama.jpg)
-![texto alternativo](/assets/img/bigkodama.jpg)
+
+o podemos poner `<img src="/assets/img/kodama.jpg" style="width:50%; margin:auto; display:block;">` para espedificar tamaño y centrar la imagen
+
+<img src="/assets/img/kodama.jpg" style="width:50%; margin:auto; display:block;">
 
 <hr class="codebreak">
 
@@ -107,3 +110,13 @@ Ad pro invenire evertitur, nisl partiendo qui ei. Te nam dolorum dissentias, te 
 > Cu vix graeco platonem, per id duis ferri mollis, an delenit evertitur ius. Pri in habeo mollis. Pro ea purto soleat, congue veritus te mea. Dicit mnesarchum te quo, eius animal eripuit ea nam.
 
 Augue libris luptatum ei vix, eum eu commodo vidisse similique. Eu pertinax corrumpit vel, atqui error dicant mei at, in qui alii paulo facilis. Vim doming eleifend te, interesset liberavisse id vel. No vix aliquam bonorum efficiendi, nam an modus debet scribentur, vim timeam scribentur consectetuer at. Cu ius suas mundi errem, has in consul honestatis. Mucius sanctus per ei, ad mel populo laoreet scaevola, id posse iisque elaboraret eam.
+
+<hr class="codebreak">
+
+[spoiler]
+
+```java
+Podemos usar [spoiler] y [/spoiler] para ocultar texto
+```
+
+[/spoiler]

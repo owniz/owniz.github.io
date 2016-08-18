@@ -77,7 +77,7 @@ blockquote {
 	text-decoration: none;
 }
 
-.header ul a, .blog ul a, .post a, .about a {
+.header ul a, .blog ul a, #post a, .about a {
   color: $color-link;
   text-decoration: none;
   &:visited {
@@ -106,6 +106,9 @@ ul {
 	}
 }
 
+img {
+	width: 100%;
+}
 
 .wrapper {
 	max-width: 700px;
@@ -168,7 +171,7 @@ ul {
 	}
 }
 
-.post {
+#post {
 	padding-bottom: 30px;
 	&__back {
 		a {
