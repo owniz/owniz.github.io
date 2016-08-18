@@ -267,6 +267,8 @@ ul {
 			line-height: 1.5;
 			border-radius: 3px;
 			background: $color-black;
+			overflow-x: auto;
+    		overflow-y: hidden;
 			code {
 				color: $color-code;
 				background: none;

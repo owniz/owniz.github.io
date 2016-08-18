@@ -63,16 +63,16 @@ para poner una imagen usamos `![título](/assets/img/kodama.jpg)`
 
 para tablas podemos usar
 
-	| Título 1      | Título 2      | Titulo 3  |
-	| ------------- |:-------------:| ---------:| 
-	| izquierda     | centrado      | derecha   |
-	| uno           | dos           |   tres    |
+	| Título 1     | Título 2     | Titulo 3  |
+	| ------------ |:------------:| ---------:| 
+	| izquierda    | centrado     | derecha   |
+	| uno          | dos          |   tres    |
 
 
-| Título 1      | Título 2      | Titulo 3  |
-| ------------- |:-------------:| ---------:| 
-| izquierda     | centrado      | derecha   |
-| uno           | dos           |   tres    |
+| Título 1     | Título 2     | Titulo 3  |
+| ------------ |:------------:| ---------:| 
+| izquierda    | centrado     | derecha   |
+| uno          | dos          |   tres    |
 
 <hr class="codebreak">
 
