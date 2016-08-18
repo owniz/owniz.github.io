@@ -6,7 +6,7 @@
 
 body {
 	color: $color-white;
-	background: #424242;
+	background: #1C1C1C;
 	font-family: 'Inconsolata', ;
 	font-size: 100%;
 	font-weight: 400;
@@ -26,7 +26,7 @@ table {
 }
 
 th{
-	background-color: $color-black;
+	background-color: $color-grey;
 	vertical-align: middle;
 	font-weight: bold;
     border: 1px solid $color-white;
@@ -36,7 +36,12 @@ th{
     padding-bottom: 4px;
 }
 
+tr:nth-child(even) {
+    background-color: $color-black;
+}
+
 td {
+	
 	vertical-align: middle;
     border: 1px solid $color-white;
     padding-left: 10px;

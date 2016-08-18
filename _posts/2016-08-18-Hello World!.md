@@ -15,7 +15,7 @@ texto normal :D <- `texto normal`
 
 *cursiva* <- `*cursiva*`
 
-[link](https://jmoral.es) <- `[link](https://jmoral.es)`
+[link](http://jmoral.es) <- `[link](https://jmoral.es)`
 
 <hr class="codebreak">
 
@@ -50,6 +50,14 @@ listas con `*`
 		}
 	}
 
+```
+public class HelloWorld {
+   public static void main(String[] args) {
+      System.out.print("o podemos poner ``` antes y después del código");
+   }
+}
+```
+
 <hr class="codebreak">
 
 Con `<hr class="codebreak">` ponemos esta línea discontinua
@@ -72,6 +80,8 @@ para tablas podemos usar
 | Título 1     | Título 2     | Titulo 3  |
 | ------------ |:------------:| ---------:| 
 | izquierda    | centrado     | derecha   |
+| uno          | dos          |   tres    |
+| uno          | dos          |   tres    |
 | uno          | dos          |   tres    |
 
 <hr class="codebreak">
