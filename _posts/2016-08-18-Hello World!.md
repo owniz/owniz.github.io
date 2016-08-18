@@ -58,6 +58,14 @@ public class HelloWorld {
 }
 ```
 
+```java
+public class HelloWorld {
+   public static void main(String[] args) {
+      System.out.print("o podemos poner ```java antes y después ``` para que lo pinte con el tema Monokai");
+   }
+}
+```
+
 <hr class="codebreak">
 
 Con `<hr class="codebreak">` ponemos esta línea discontinua
@@ -65,7 +73,9 @@ Con `<hr class="codebreak">` ponemos esta línea discontinua
 <hr class="codebreak">
 
 para poner una imagen usamos `![título](/assets/img/kodama.jpg)`
+
 ![texto alternativo](/assets/img/kodama.jpg)
+![texto alternativo](/assets/img/bigkodama.jpg)
 
 <hr class="codebreak">
 

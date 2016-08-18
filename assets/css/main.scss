@@ -51,7 +51,6 @@ td {
 }
 
 blockquote {
-  
   border-left: 5px solid $color-grey;
   margin: 1.5em 20px;
   padding: 0.5em 10px;
@@ -109,7 +108,7 @@ ul {
 
 
 .wrapper {
-	max-width: 600px;
+	max-width: 700px;
 	margin: auto;
 	padding: 25px 30px 60px 30px;
 	@media screen and (max-width: $br) {
