@@ -116,7 +116,7 @@ Augue libris luptatum ei vix, eum eu commodo vidisse similique. Eu pertinax corr
 [spoiler]
 
 ```java
-Podemos usar [spoiler] y [/spoiler] para ocultar texto
+Podemos usar [spoiler] y [/spoiler] para ocultar contenido
 ```
 
 [/spoiler]

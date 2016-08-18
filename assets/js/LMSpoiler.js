@@ -15,7 +15,7 @@ function LMSpoiler() {
     */
 
   this.contentTag = "#post"; //id for element which contains spoiler tags (usually main container or something like this)
-  this.customShowText = "Show hidden content"; //text to show in top of spoilers
+  this.customShowText = "Mostrar contenido oculto"; //text to show in top of spoilers
   this.customSpoilerClass = "spoiler"; //class used for style spoilers
   this.spoilerTime = 350; //time take to open or close the spoiler
 
