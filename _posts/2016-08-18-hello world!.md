@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Hola mundo!
+permalink: "blog/hola-mundo"
 ---
 
 # Primer post para probar el markdown con Jekyll :D
@@ -61,7 +62,7 @@ public class HelloWorld {
 ```java
 public class HelloWorld {
    public static void main(String[] args) {
-      System.out.print("o podemos poner ```java antes y después ``` para que lo pinte con el tema Monokai");
+      System.out.print("también podemos poner ```java antes y después ``` para que lo pinte con el tema Monokai");
    }
 }
 ```
@@ -76,7 +77,7 @@ para poner una imagen usamos `![título](/assets/img/kodama.jpg)`
 
 ![texto alternativo](/assets/img/kodama.jpg)
 
-o podemos poner `<img src="/assets/img/kodama.jpg" style="width:50%; margin:auto; display:block;">` para espedificar tamaño y centrar la imagen
+o podemos poner `<img src="/assets/img/kodama.jpg" style="width:50%; margin:auto; display:block;">` para especificar tamaño y centrar la imagen
 
 <img src="/assets/img/kodama.jpg" style="width:50%; margin:auto; display:block;">
 
