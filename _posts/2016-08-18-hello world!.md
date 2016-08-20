@@ -85,9 +85,9 @@ para poner una imagen usamos `![título](/assets/img/kodama.jpg)`
 
 ![texto alternativo](/assets/img/kodama.jpg)
 
-o podemos poner `<img src="/assets/img/kodama.jpg" style="width:50%; margin:auto; display:block;">` para especificar tamaño y centrar la imagen
+o podemos poner `<img src="/assets/img/kodama.jpg" alt="kodama" style="width:50%; margin:auto; display:block;">` para especificar tamaño y centrar la imagen
 
-<img src="/assets/img/kodama.jpg" style="width:50%; margin:auto; display:block;">
+<img src="/assets/img/kodama.jpg" alt="kodama" style="width:50%; margin:auto; display:block;">
 
 <hr class="codebreak">
 
