@@ -88,7 +88,7 @@ blockquote {
 	text-decoration: none;
 }
 
-.header ul a, .blog ul a, #post a, .about a, .post__back {
+.header ul a, .blog ul a, #post a, .about a, .post__back, p a {
   color: $color-link;
   text-decoration: none;
   &:visited {
@@ -167,18 +167,6 @@ img {
 	h1 {
 		font-size: 1.4em;
 		margin-bottom: 5px;
-	}
-}
-
-.music {
-	padding-bottom: 30px;
-	h1 {
-		font-size: 1.4em;
-		margin-bottom: 5px;
-	}
-	a {
-		padding: 5px;
-		padding-left: 10px;
 	}
 }
 
@@ -326,4 +314,9 @@ img {
 			margin-bottom: 10px;
 		}
 	}
+}
+
+.face {
+	text-align: center;
+	font-size: 40px;
 }
