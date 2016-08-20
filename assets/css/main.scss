@@ -5,7 +5,6 @@
 @import "config";
 
 body {
-	min-height: 600px;
 	width: 100%;
 	margin-left: calc(50vw - (100% / 2));
 	overflow-x: hidden;
@@ -14,7 +13,6 @@ body {
 	font-family: 'Inconsolata', ;
 	font-size: 100%;
 	font-weight: 400;
-	position: relative;
 }
 
 h1 {
@@ -47,7 +45,6 @@ tr:nth-child(even) {
 }
 
 td {
-	
 	vertical-align: middle;
     border: 1px solid $color-white;
     padding-left: 10px;
@@ -63,15 +60,11 @@ blockquote {
 }
 
 .license{
- 	position: absolute;
-	bottom: 0;
-	width: 100%;
 	text-align: center;
 	font-size: 12px;
-}
-
-.license hr {
-	max-width: 700px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	border-top: 2px solid $color-white;
 }
 
 .header img {
@@ -189,7 +182,12 @@ img {
 	}
 }
 
+.posts {
+	min-height: 350px;
+}
+
 #post {
+	text-align: left;
 	padding-bottom: 30px;
 	&__back {
 		a {
