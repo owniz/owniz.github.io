@@ -4,7 +4,7 @@ title: Hola mundo!
 permalink: "blog/hola-mundo"
 ---
 
-# Primer post con chuleta para markdown con Jekyll y algún estilo personalizado (css) :P
+# Primer post con chuletas del markdown y varios :P
 
 <br>
 

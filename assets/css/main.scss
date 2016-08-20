@@ -23,6 +23,10 @@ p {
 	line-height: 150%;
 }
 
+i {
+	color: $color-white;
+}
+
 table {
 	border-collapse: collapse;
     border: 2px solid $color-white;
@@ -84,11 +88,7 @@ blockquote {
   filter: grayscale(0%);
 }
 
-.header a {
-	text-decoration: none;
-}
-
-.header ul a, .blog ul a, #post a, .about a, .post__back, p a, .license #cctext a {
+.header ul a, .blog ul a, #post a, .post__back, p a, .license #cctext a {
   color: $color-link;
   text-decoration: none;
   &:visited {
@@ -99,7 +99,7 @@ blockquote {
 	color: $color-link;
 	text-decoration: none;
 	padding-bottom: 1px;
-	border-bottom: 1px solid $color-link;
+	border-bottom: 1px solid blue;
   }
   &:active {
 	color: $color-link;
@@ -208,7 +208,7 @@ img {
 		}
 	}
 	&__content {
-		padding-top: 40px;
+		padding-top: 10px;
 		h1 {
 			font-size: 1.4em;
 			font-weight: 700;
@@ -302,16 +302,23 @@ img {
 	}
 	&__content {
 		margin-top: 20px;
+		margin-bottom: 40px;
 		h1 {
-			font-size: 1.2em;
-			font-style: italic;
-			margin-top: 30px;
-			margin-bottom: 5px;
+			font-size: 1.4em;
+			font-weight: 700;
+			margin-top: 50px;
+			margin-bottom: 30px;
 		}
 		p {
 			font-size: 1em;
 			line-height: 150%;
 			margin-bottom: 10px;
+		}
+		strong {
+			font-weight: 700;
+		}
+		em {
+			font-style: italic;
 		}
 	}
 }
@@ -323,4 +330,8 @@ img {
 
 #ccimg {
 	padding-top: 6px;
+}
+
+#contact {
+	text-align: center;
 }
