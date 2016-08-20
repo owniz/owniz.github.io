@@ -23,5 +23,5 @@ Un saludo. :D
 
 <div id="contact">
 	<a href="mailto:iam@jmoral.es"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a>
-	<a href="https://github.com/owniz" target="_blank"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+	<a href="https://twitter.com/owniz" target="_blank"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
 </div>
