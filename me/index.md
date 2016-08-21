@@ -11,8 +11,8 @@ Después de consultarlo con la almohada empecé un Grado superior de DAM (Desarr
 [Aula Campus](http://www.campusaula.com/) situado en Burjassot (Valencia), ahora mismo estoy cursando el último año de éste.
 
 
-Entre mis *hobbies*, además de la informática en muchos de sus aspectos, se encuentra el salir a correr de vez en cuando, además no desprecio una ~~buena~~
-historia ya sea a través de una película, cómic, libro o videojuego, todo depende del momento y el tiempo disponible. =)
+Entre mis *hobbies*, además de la informática en muchos de sus aspectos, se encuentra el salir a correr de vez en cuando, tambien me gustan las ~~buenas~~
+historias ya sean a través de películas, cómics, libros o videojuegos, todo depende del momento y el tiempo disponible. =)
 
 En este blog los temas pueden ser muy variopintos ya que es de carácter personal, pero la gran mayoría estarán enfocados a la 
 informática o la programación.
