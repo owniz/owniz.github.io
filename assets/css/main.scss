@@ -335,3 +335,18 @@ img {
 #contact {
 	text-align: center;
 }
+
+#contact a {
+	-webkit-filter: none;
+	filter: none;
+	transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+}
+
+#contact a:hover {
+	-webkit-filter: invert(80%);
+	filter: invert(80%);
+}

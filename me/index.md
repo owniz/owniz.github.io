@@ -17,7 +17,7 @@ historia ya sea a través de una película, cómic, libro o videojuego, todo dep
 En este blog los temas pueden ser muy variopintos ya que es de carácter personal, pero la gran mayoría estarán enfocados a la 
 informática o la programación.
 
-Por último os dejo más abajo las formas de contactar conmigo, para que elijáis la que más os guste.
+Por último os dejo mi correo electrónico: [iam@jmoral.es](mailto:iam@jmoral.es) y más abajo otros métodos para que elijáis el que más os guste.
 
 Un saludo. :D
 
