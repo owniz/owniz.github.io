@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Jekyll ¿Por qué?
-permalink: "blog/jekyll-why"
+permalink: "blog/jekyll-por-que"
 ---
 
 # ~~Primer~~ Segundo post oficial del blog.

@@ -30,7 +30,6 @@ i {
 table {
 	border-collapse: collapse;
     border: 2px solid $color-white;
-    
 }
 
 th{
@@ -71,7 +70,7 @@ blockquote {
 	border-top: 2px solid $color-white;
 }
 
-.header img {
+.nav img {
   width: 100px;
   height: 100px;
   -webkit-filter: grayscale(100%);
@@ -83,12 +82,12 @@ blockquote {
   -ms-transition: all 0.5s ease;
 }
 
-.header img:hover {
+.nav img:hover {
   -webkit-filter: grayscale(0%);
   filter: grayscale(0%);
 }
 
-.header ul a, .blog ul a, #post a, .post__back, p a, .license #cctext a {
+.nav ul a, .blog ul a, #post a, .post__back, p a, .license #cctext a {
   color: $color-link;
   text-decoration: none;
   &:visited {
@@ -121,7 +120,7 @@ img {
 	width: 100%;
 }
 
-.wrapper {
+.main {
 	max-width: 700px;
 	margin: auto;
 	padding: 25px 30px 60px 30px;
@@ -131,7 +130,7 @@ img {
 }
 
 
-.header {
+.nav {
 	text-align: center;
 	justify-content: space-between;
 	padding-bottom: 5px;
@@ -235,7 +234,7 @@ img {
 			}
 		}
 		strong {
-			font-weight: 700;
+			font-weight: 900;
 		}
 		em {
 			font-style: italic;
