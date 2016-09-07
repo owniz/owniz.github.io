@@ -70,7 +70,7 @@ public class HelloWorld {
 ```python
 public class HelloWorld {
    public static void main(String[] args) {
-      System.out.print("también podemos poner ```java antes y después ``` para que lo pinte con el tema Monokai en java, puedes usar otro lenguajes como python, ruby, css, etc y además tiene scrollbar!");
+      System.out.print("también podemos poner ```java antes y después ``` para que lo pinte con el tema Monokai en java, puedes usar otro lenguaje como python, ruby, css, etc y además tiene scrollbar!");
    }
 }
 ```
