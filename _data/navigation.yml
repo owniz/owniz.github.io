@@ -1,6 +1,9 @@
 - title: /home
   url: /
 
+- title: /tags
+  url: /categorias
+
 - title: /about
   url: /me
 

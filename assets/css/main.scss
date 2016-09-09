@@ -87,7 +87,7 @@ blockquote {
   filter: grayscale(0%);
 }
 
-.nav ul a, .blog ul a, #post a, .post__back, p a, .license #cctext a {
+.nav ul a, .blog ul a, #post a, .post__back, p a, .license #cctext a, .categories a {
   color: $color-link;
   text-decoration: none;
   &:visited {
@@ -114,6 +114,10 @@ ul {
 			padding: 10px 0 10px 0;
 		}
 	}
+}
+
+.posts ul {
+	margin-bottom: 15px;
 }
 
 img {
@@ -167,10 +171,6 @@ img {
 		font-size: 1.4em;
 		margin-bottom: 5px;
 	}
-}
-
-.posts {
-	min-height: 350px;
 }
 
 #post {
@@ -348,4 +348,32 @@ img {
 #contact a:hover {
 	-webkit-filter: invert(80%);
 	filter: invert(80%);
+}
+
+.catbloc:not(:target) {
+display: none;
+}
+
+h2.category_header {
+	text-transform: capitalize;
+	font-size: x-large;
+}
+
+#category_selector { 
+	border: 2px solid $color-white;
+	font-size: 1em;
+	color: $color-white; 
+	background-color: #272727;
+	padding: 5px; 
+	width: 25%;
+	margin-bottom: 10px;
+	text-transform: capitalize;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	outline: none;
+}
+
+nav {
+	text-align: right;
 }
