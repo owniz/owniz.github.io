@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Jekyll ¿Por qué?
-category: jekyll
+category: general
 permalink: "blog/jekyll-por-que"
 ---
 

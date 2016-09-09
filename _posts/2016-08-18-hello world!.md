@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hola mundo!
-category: web
+category: general
 permalink: "blog/hola-mundo"
 ---
 
