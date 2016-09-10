@@ -1,8 +1,9 @@
 ---
 layout: post
-title: Hola mundo!
+title: ¡Hola mundo!
 category: general
 permalink: "blog/hola-mundo"
+published: yes
 ---
 
 # Primer post con chuletas del markdown y varios :P
@@ -23,7 +24,13 @@ texto normal :D <- `texto normal`
 
 ~~tachado~~ <- `~~tachado~~`
 
+Para escribir por ejemplo \*tachado\* y evitar que tache la palabra usaremos `\*tachado\*`
+
 [link](http://jmoral.es) <- `[link](https://jmoral.es)`
+
+Para que al situar el ratón encima del link aparezca una pequeña descripción podemos añadir texto entre comillas antes del cierre del paréntesis
+
+[link](http://jmoral.es "Blog personal de Javi Morales") <- `[link](https://jmoral.es "Blog personal de Javi Morales")`
 
 <hr class="codebreak">
 
@@ -82,6 +89,10 @@ Con `<hr class="codebreak">` ponemos esta línea discontinua
 
 <hr class="codebreak">
 
+O podemos utilizar `---` para poner una línea continua como sustituto de `<hr>`
+
+---
+
 para poner una imagen usamos `![título](/assets/img/kodama.jpg)`
 
 ![texto alternativo](/assets/img/kodama.jpg)
@@ -130,3 +141,9 @@ Podemos usar [spoiler] y [/spoiler] para ocultar contenido
 ```
 
 [/spoiler]
+
+<hr class="codebreak">
+
+Hay muchos más *markdowns* que con una simple búsqueda en Google serás capaz de averiguar. También puedes utilizar todo el código HTML5 que quieras sin problemas.
+
+Un saludo. ツ

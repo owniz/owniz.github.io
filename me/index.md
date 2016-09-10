@@ -8,7 +8,7 @@ Después de mucho pensar qué escribir en esta sección del blog he decidido qu�
 
 Durante los años en los que he trabajado he pasado por diferentes trabajos nada relacionados con la informática pese a ser una de mis grandes aficiones.
 Después de consultarlo con la almohada empecé un Grado superior de DAM (Desarrollo Aplicaciones Multiplataforma) en 
-[Aula Campus](http://www.campusaula.com/) situado en Burjassot (Valencia), ahora mismo estoy cursando el último año de éste.
+[Aula Campus](http://www.campusaula.com/ "Aula Campus") situado en Burjassot (Valencia), ahora mismo estoy cursando el último año de éste.
 
 
 Entre mis *hobbies*, además de la informática en muchos de sus aspectos, se encuentra el salir a correr de vez en cuando, también me gustan las ~~buenas~~
@@ -17,7 +17,7 @@ historias ya sean a través de películas, cómics, libros o videojuegos, todo d
 En este blog los temas pueden ser muy variopintos ya que es de carácter personal, pero la gran mayoría estarán enfocados a la 
 informática o la programación.
 
-Por último os dejo mi correo electrónico: [iam@jmoral.es](mailto:iam@jmoral.es) y más abajo otros métodos para que elijáis el que más os guste.
+Por último os dejo mi correo electrónico: [iam@jmoral.es](mailto:iam@jmoral.es "iam@jmoral.es") y más abajo otros métodos de contacto para que elijáis el que más os guste.
 
 Un saludo. :D
 

@@ -32,7 +32,7 @@ table {
     border: 2px solid $color-white;
 }
 
-th{
+th {
 	background-color: $color-grey;
 	vertical-align: middle;
 	font-weight: bold;
@@ -122,6 +122,20 @@ ul {
 
 img {
 	width: 100%;
+}
+
+img.inlinethree {
+	width: 300%;
+	@media only screen and (min-width: 768px) {
+		width: 32%;
+	}
+}
+
+img.inlinetwo {
+	width: 100%;
+	@media only screen and (min-width: 768px) {
+		width: 49%;
+	}
 }
 
 .main {
@@ -261,7 +275,7 @@ img {
 			margin-bottom: 10px;
 			@media screen and (max-width: $br) {
 				width: 100%;
-				margin: auto;
+				margin: left;
 			}
 		}
 		code {
@@ -325,6 +339,7 @@ img {
 .face {
 	text-align: center;
 	font-size: 40px;
+	padding-bottom: 40px;
 }
 
 #ccimg {
@@ -373,23 +388,10 @@ h2.category_header {
 	-moz-border-radius: 4px;
 	border-radius: 4px;
 	outline: none;
-}
-
-@media only screen and (min-width: 768px) {
-	#category_selector { 
-	border: 2px solid $color-white;
-	font-size: 1em;
-	color: $color-white; 
-	background-color: #272727;
-	padding: 5px; 
-	width: 25%;
-	margin-bottom: 10px;
-	text-transform: capitalize;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
-	outline: none;
-}
+	cursor: pointer;
+	@media only screen and (min-width: 768px) {
+		width: 25%;
+	}
 }
 
 nav {
