@@ -6,7 +6,7 @@ permalink: "blog/hola-mundo"
 published: yes
 ---
 
-# Primer post con chuletas del markdown y varios :P
+# Primer post con chuletas de la sintaxis para markdown y varios :P
 
 <br>
 
@@ -144,6 +144,6 @@ Podemos usar [spoiler] y [/spoiler] para ocultar contenido
 
 <hr class="codebreak">
 
-Hay muchos más *markdowns* que con una simple búsqueda en Google serás capaz de averiguar. También puedes utilizar todo el código HTML5 que quieras sin problemas.
+Hay mucha más sintaxis para *markdown* que con una simple búsqueda en Google serás capaz de averiguar. También puedes utilizar todo el código HTML5 que quieras sin problemas.
 
 Un saludo. ツ
