@@ -10,7 +10,7 @@ published: yes
 
 <br>
 
-`highlight` <- para utilziarlo escribir ` ` con el texto entre medias
+`highlight` <- para utilziarlo escribid ` ` con el texto entre medias
 
 texto normal :D <- `texto normal`
 
@@ -24,7 +24,7 @@ texto normal :D <- `texto normal`
 
 ~~tachado~~ <- `~~tachado~~`
 
-Para escribir por ejemplo \*tachado\* y evitar que tache la palabra usaremos `\*tachado\*`
+Para escribir por ejemplo \~~tachado\~~ y evitar que tache la palabra usaremos `\~~tachado\~~`
 
 [link](http://jmoral.es) <- `[link](https://jmoral.es)`
 
@@ -78,7 +78,7 @@ public class HelloWorld {
 ```python
 public class HelloWorld {
    public static void main(String[] args) {
-      System.out.print("también podemos poner ```java antes y después ``` para que lo pinte con el tema Monokai en java, puedes usar otro lenguaje como python, ruby, css, etc y además tiene scrollbar!");
+      System.out.print("también podemos poner ```java antes y después ``` para que lo pinte con el tema Monokai en java, puedes usar otro lenguaje como python, ruby, css, etc y ¡además tiene scrollbar!");
    }
 }
 ```
