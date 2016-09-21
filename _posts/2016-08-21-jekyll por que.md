@@ -17,7 +17,7 @@ así que investigué que era eso de Jekyll además del conocido Dr. Jekyll.
 
 ![jekyll](/assets/img/jekyll_logo.png)
 
-Jekyll, como bien indican en su web con *transform your plain text into static websites and blogs*,es una manera sencilla de hacer una página web o blog de forma estática, es decir, sin necesidad
+Jekyll, como bien indican en su web con *transform your plain text into static websites and blogs*, es una manera sencilla de hacer una página web o blog de forma estática, es decir, sin necesidad
 de una base de datos detrás para generar todo el contenido, por lo que se gana muchísima rapidez en ésta.
 
 Jekyll es sencillo, puedes escribir los *posts* prácticamente como texto plano (aunque puedes poner todo el HTML que quieras en él), tienes una chuleta de algunas de las opciones a la hora de cómo 
