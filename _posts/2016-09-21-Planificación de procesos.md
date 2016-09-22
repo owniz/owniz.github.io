@@ -12,7 +12,7 @@ Hoy os hablaré de algunos de los algoritmos que se utilizan para la ordenación
 
 # ¿Por qué la necesidad de estos?
 
-Estos métodos nacieron por la necesidad de poder ordenador los procesos para ganar eficiencia a la hora de tratar con ellos, es decir, son los
+Estos métodos nacieron por la necesidad de poder ordenar los procesos para ganar eficiencia a la hora de tratar con ellos, es decir, son los
 encargados de ordenar y dirigir los procesos para asegurar que ninguno de ellos monopolice el uso de la CPU.
 
 # Conceptos básicos.
@@ -27,7 +27,7 @@ Antes de ver algunos de los algoritmos más utilizados vamos a dar a conocer alg
 
 Y por último dos tipos de algoritmos:
 
-* **Apropiativo:** También conocido como **expulsivo** o **expropiativo**, este tipo de algoritmo nos permite la expulsión de procesos para ejecutar un nuevo proceso, poniendo en cola al anterior
+* **Apropiativo:** También conocido como **expulsivo** o **expropiativo**, este tipo de algoritmo nos permite la expulsión de procesos para ejecutar un nuevo proceso, poniendo en cola al anterior.
 * **No Apropiativo:** Este tipo no nos permite la expulsión, por lo que un proceso nuevo no entrará hasta que termine el anterior.
 
 # Tipos de algoritmo.
@@ -94,7 +94,7 @@ Ejemplo:
 ## *Round Robin*.
 
 Por último os hablaré de *Round Robin*, este algoritmo de planificación es uno de los más complejos y difíciles de implementar, asigna a cada proceso un
-tiempo equitativo tratando a todos procesos por igual y con la misma prioridad. 
+tiempo equitativo tratando a todos los procesos por igual y con la misma prioridad. 
 
 Este algoritmo es circular, volviendo siempre al primer proceso una vez terminado con el último,
 para controlar este método a cada proceso se le asigna un intervalo de tiempo llamado *quantum* o
@@ -139,6 +139,6 @@ Por lo tanto es muy difícil decidir que algoritmo es mejor que el otro y todo d
 en la que estemos, siendo muy útil un estudio de lo que necesitamos para utilizar un método u
 otro, o incluso combinarlos según nuestras necesidades.
 
-Aquí llegamos al final de este pequeño repaso de los algoritmos más utilizados, para cualquier duda no dudéis en preguntar enviandome un correo a [iam@jmoral.es](mailto:iam@jmoral.es "iam@jmoral.es").
+Aquí llegamos al final de este pequeño repaso de los algoritmos más utilizados, para cualquier duda no dudéis en preguntar enviándome un correo a [iam@jmoral.es](mailto:iam@jmoral.es "iam@jmoral.es").
 
 Un saludo. =)
