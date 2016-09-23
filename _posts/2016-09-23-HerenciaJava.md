@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Herencia en Java
 category: [AD, java]
