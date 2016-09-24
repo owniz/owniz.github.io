@@ -38,7 +38,7 @@ Una vez tenemos la visibilidad refrescada podemos dar un vistazo a cómo está e
 ```java
 public class Coche {
 
-	// atributos<
+	// atributos
 	private int cilindrada;
 	private int potencia;
 	
@@ -80,19 +80,19 @@ public class Coche {
 ```
 
 En esta clase lo primero que vemos es `private int cilintrada` y `private int potencia` que son la forma de declarar los atributos de la clase y justo debajo tenemos los constructores 
-que nos permitirán poder instanciar (o crear) objetos de esta clase, al primero le damos unos valores por defecto y en el segundo los introduciremos a la hora de instanciar los objetos.
-Dentro de este segundo constructor tenemos `this.potencia = potencia` ¿qué significa esto?. Con **this** estamos haciendo referencia a que es el atributo de esta clase para evitar
+que nos permitirán poder instanciar objetos de esta clase, al primero le damos unos valores por defecto y en el segundo los introduciremos a la hora de instanciar los objetos.
+Dentro de este segundo constructor tenemos `this.potencia = potencia` ¿qué significa esto?. Con **this** estamos haciendo referencia a la instancia concreta de ese objeto para evitar
 un posible caso de confusión con otro atributo llamado de la misma forma en otra clase y en general con esa línea estamos asignando el valor al atributo que introduciremos al instanciar un objeto de la clase.
 
 > Ejemplo instanciando un objeto asignando nosotros su valor:
 >
 > **Coche cocheUno = new Coche(1500, 100);**
 
-Justo debajo tenemos los métodos, conocidos popularmente como, getters y setters que nos permitirán acceder a los atributos de la clase desde otras clases, ya que tienen los atributos 
+Justo debajo tenemos los métodos, conocidos popularmente como getters y setters que nos permitirán acceder a los atributos de la clase desde otras clases, ya que tienen los atributos 
 definida su visibilidad como `private`.
 
 Por último vemos un método con `@Override` y quizá os preguntéis ¿qué significa esto? Pues muy sencillo, escribiendo esa línea antes de un método indicamos que lo vamos a sobrescribir, es decir
-ya existe un método llamado `toString()` y nosotros vamos a sobrescribir ese método indicando que queremos que haga.
+ya existe un método llamado `toString()` y nosotros vamos a sobrescribir ese método indicando qué queremos que haga.
 
 ## Clase hija o subclase
 
@@ -122,12 +122,12 @@ public class Deportivo extends Coche {
 Lo primero que tenemos que ser capaces de apreciar son las dos nuevas palabras que vemos al principio `extends Coche` con esto estamos diciendo que la clase Deportivo es hija de la clase Coche,
 esto quiere decir que podremos utilizar los atributos y métodos de la clase **Coche** desde la clase **Deportivo**.
 
-Justo debajo tenemos el atributo de la clase y puede que os preguntéis como podemos acceder a los atributos de la clase padre, pues muy sencillo, fijaos un momento en el constructor que está justo debajo,
-¿qué podéis apreciar diferente con respecto al constructor de la clase padre? Está claro verdad, le estamos pasando los atributos de la clase Padre **Coche** pese a no declararlos en 
+Justo debajo tenemos el atributo de la clase y puede que os preguntéis cómo podemos acceder a los atributos de la clase padre, pues muy sencillo, fijaos un momento en el constructor que está justo debajo,
+¿qué podéis apreciar diferente con respecto al constructor de la clase padre? Está claro ¿verdad? Le estamos pasando los atributos de la clase Padre **Coche** pese a no declararlos en 
 la clase hija **Deportivo** así que para poder llamar y utilizar esos atributos de la clase padre utilizamos un nuevo concepto `super`.
 
 Por último volvemos a tener el método sobrescrito `toString()`, pero en esta ocasión no hace falta que llamemos a los atributos de la clase padre para obtener sus valores, podemos utilizar el método `toString()`
-de está y luego añadir el atributo que queremos mostrar de la clase hija.
+de ésta y luego añadir el atributo que queremos mostrar de la clase hija.
 
 Y hasta aquí este pequeño repaso sobre la herencia en Java, espero que haya sido capaz de explicarlo de una forma sencilla y amena para todo el mundo pero sobretodo que lo hayáis entendido.
 
