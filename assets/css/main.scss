@@ -31,6 +31,13 @@ table {
 	border-collapse: collapse;
     border: 2px solid $color-white;
     margin-bottom: 16px;
+    @media screen and (max-width: $br) {
+    	border: none;
+		display: block;
+		overflow-x: scroll;
+    	overflow-y: hidden;
+		
+	}
 }
 
 th {
@@ -126,7 +133,7 @@ img {
 }
 
 img.inlinethree {
-	width: 300%;
+	width: 100%;
 	@media only screen and (min-width: 768px) {
 		width: 32%;
 	}
@@ -136,6 +143,13 @@ img.inlinetwo {
 	width: 100%;
 	@media only screen and (min-width: 768px) {
 		width: 49%;
+	}
+}
+
+img.differentSize {
+	width: 65%;
+	@media screen and (max-width: $br) {
+		width: 100%;
 	}
 }
 

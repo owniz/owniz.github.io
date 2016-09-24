@@ -3,36 +3,42 @@ layout: post
 title: Herencia en Java
 category: [AD, java]
 permalink: "blog/herencia-java"
-published: no
+published: yes
 ---
 
 <br>
 
-Hoy hablaremos sobre la herencia en Java, ¿qué es? ¿Por qué es importante? ¿Cómo utilizarla? y las palabras clave y conceptos que necesitamos conocer.
+Hoy os hablaré sobre la herencia en Java, qué es, por qué es importante, cómo utilizarla, las palabras clave y conceptos que necesitamos conocer.
 
 # Visibilidad
 
-Antes de entrar en materia un pequeño repaso a la visibilidad o encapsulación en Java.
+Antes de entrar en materia un pequeño repaso en forma de tabla a la visibilidad o encapsulación en Java.
 
 | Visibilidad | Desde la clase | Desde el paquete | Desde clase heredada | Todas las clases y paquetes |
 |:-:|:-:|:-:|:-:|:-:|
-| private | X |   |   |   |
-| default | X | X |   |   |
-| protected | X | X | X |   |
-| public | X | X | X | X |
+| private | <i class="fa fa-check" aria-hidden="true"></i> |   |   |   |
+| default | <i class="fa fa-check" aria-hidden="true"></i> | <i class="fa fa-check" aria-hidden="true"></i> |   |   |
+| protected | <i class="fa fa-check" aria-hidden="true"></i> | <i class="fa fa-check" aria-hidden="true"></i> | <i class="fa fa-check" aria-hidden="true"></i> |   |
+| public | <i class="fa fa-check" aria-hidden="true"></i> | <i class="fa fa-check" aria-hidden="true"></i> | <i class="fa fa-check" aria-hidden="true"></i> | <i class="fa fa-check" aria-hidden="true"></i> |
 
-Gracias a esta tabla debemos ser capaces de entender desde donde serán accesibles los atributos o métodos según el acceso que le demos.
+Ahora deberíamos ser capaces de entender desde donde serán accesibles los atributos o métodos según el acceso que le demos a la hora de declaralos.
 
-# herencia
+# Herencia
 
-Una vez teniendo la visibilidad refrescada podemos dar un vistazo a como esta estructurada una clase, en este caso utilizaré una clase **padre** llamada **Coche**.
+<br>
 
-## Clase Padre o Superclase
+<img class="differentSize" src="/assets/img/diagrama.png" alt="diagrama" style="margin:auto; display:block;">
+
+<br>
+
+Una vez tenemos la visibilidad refrescada podemos dar un vistazo a cómo está estructurada una clase, en este caso utilizaré una clase **padre** llamada **Coche**.
+
+## Clase padre o superclase
 
 ```java
 public class Coche {
 
-	// atributos
+	// atributos<
 	private int cilindrada;
 	private int potencia;
 	
@@ -65,7 +71,7 @@ public class Coche {
 		this.potencia = potencia;
 	}
 	
-	// método que sobreescribe toString para devolver los valores
+	// método que sobrescribe toString para mostrar los valores
 	@Override
 	public String toString() {
 		return "Cilindrada: " + this.cilindrada + "\n\tPotencia: " + this.potencia;
@@ -73,23 +79,24 @@ public class Coche {
 }
 ```
 
-En esta clase lo primero que vemos es `private int cilintrada` y `private int potencia` que es la forma de declarar los atributos de la clase y justo debajo tenemos los constructores 
+En esta clase lo primero que vemos es `private int cilintrada` y `private int potencia` que son la forma de declarar los atributos de la clase y justo debajo tenemos los constructores 
 que nos permitirán poder instanciar (o crear) objetos de esta clase, al primero le damos unos valores por defecto y en el segundo los introduciremos a la hora de instanciar los objetos.
-Dentro de este segundo constructor tenemos `this.potencia = potencia` ¿qué significa esto?. Con **this** estamos haciendo referencia que estamos utilizando el atributo de esta clase, para evitar
-un posible caso de confusión con otro atributo llamado igual en otra clase, y basicamente con esa linea estamos asignando el valor que introducimos al instanciar un objeto de la clase.
+Dentro de este segundo constructor tenemos `this.potencia = potencia` ¿qué significa esto?. Con **this** estamos haciendo referencia a que es el atributo de esta clase para evitar
+un posible caso de confusión con otro atributo llamado de la misma forma en otra clase y en general con esa línea estamos asignando el valor al atributo que introduciremos al instanciar un objeto de la clase.
 
-> Ejemplo instanciando un objeto asignando nosotros su valor.
-> ´Coche coche = new Coche(1500, 100);´
+> Ejemplo instanciando un objeto asignando nosotros su valor:
+>
+> **Coche cocheUno = new Coche(1500, 100);**
 
-Justo debajo tenemos los métodos, conocidos popularmente como, getters y setters que nos permitiran acceder a los atributos de la clase desde otras clases, ya que tienen los atributos 
+Justo debajo tenemos los métodos, conocidos popularmente como, getters y setters que nos permitirán acceder a los atributos de la clase desde otras clases, ya que tienen los atributos 
 definida su visibilidad como `private`.
 
-Por último vemos un método con `@Override` y quizá os pregunteis ¿Qué significa esto? Pues muy sencillo, escribiendo eso antes de un método indicamos que lo vamos a sobreescribir, es decir,
-ya existe un método llamado `toString` y nosotros vamos a sobreescribir ese método indicando que queremos que haga.
+Por último vemos un método con `@Override` y quizá os preguntéis ¿qué significa esto? Pues muy sencillo, escribiendo esa línea antes de un método indicamos que lo vamos a sobrescribir, es decir
+ya existe un método llamado `toString()` y nosotros vamos a sobrescribir ese método indicando que queremos que haga.
 
 ## Clase hija o subclase
 
-Una vez tenemos la clase padre explicada vamos a ver un ejemplo de clase hija
+Una vez tenemos la clase padre explicada vamos a ver un ejemplo de clase hija.
 
 ```java
 public class Deportivo extends Coche {
@@ -104,7 +111,7 @@ public class Deportivo extends Coche {
 		this.traccion = traccion;
 	}
 	
-	// método que sobreescribe toString para devolver los valores
+	// método que sobrescribe toString para mostrar los valores
 	@Override
 	public String toString() {
 		return super.toString() + "\n\tTracción: " + this.traccion;
@@ -113,11 +120,17 @@ public class Deportivo extends Coche {
 ```
 
 Lo primero que tenemos que ser capaces de apreciar son las dos nuevas palabras que vemos al principio `extends Coche` con esto estamos diciendo que la clase Deportivo es hija de la clase Coche,
-esto quiere decir que podremos utilizar los atributos y métodos de la clase Coche desde la clase Deportivo.
+esto quiere decir que podremos utilizar los atributos y métodos de la clase **Coche** desde la clase **Deportivo**.
 
-Justo debajo tenemos el atributo de la clase y puede que os pregunteis como podemos acceder a los atributos de la clase padre, pues muy sencillo, fijaos un momento en el constructor que está justo debajo,
-¿qué podeis apreciar diferente con respecto al constructor de la clase padre?, ¿está claro verdad? le estamos pasando como datos los atributos de la clase Padre (Coche) pese a no declaralos en 
-la clase hija (Deportivo) así que para poder llamar y utilizar esos atributos de la clase padre utilizamos un nuevo concepto `super`.
+Justo debajo tenemos el atributo de la clase y puede que os preguntéis como podemos acceder a los atributos de la clase padre, pues muy sencillo, fijaos un momento en el constructor que está justo debajo,
+¿qué podéis apreciar diferente con respecto al constructor de la clase padre? Está claro verdad, le estamos pasando los atributos de la clase Padre **Coche** pese a no declararlos en 
+la clase hija **Deportivo** así que para poder llamar y utilizar esos atributos de la clase padre utilizamos un nuevo concepto `super`.
 
-Por último volvemos a tener el método sobreescrito toString, pero en esta ocasión no hace falta que llamemos a los atributos de la clase padre obetenr sus valores, podemos utilizar el método **toString**
-de está y luego añadir el atributo de la clase hija.
+Por último volvemos a tener el método sobrescrito `toString()`, pero en esta ocasión no hace falta que llamemos a los atributos de la clase padre para obtener sus valores, podemos utilizar el método `toString()`
+de está y luego añadir el atributo que queremos mostrar de la clase hija.
+
+Y hasta aquí este pequeño repaso sobre la herencia en Java, espero que haya sido capaz de explicarlo de una forma sencilla y amena para todo el mundo pero sobretodo que lo hayáis entendido.
+
+Como siempre para cualquier duda y sugerencia no tengais problemas en escribir a mi correo [iam@jmoral.es](mailto:iam@jmoral.es "iam@jmoral.es").
+
+Un saludo. ツ
