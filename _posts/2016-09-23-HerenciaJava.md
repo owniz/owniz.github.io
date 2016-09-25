@@ -27,7 +27,7 @@ Ahora deberíamos ser capaces de entender desde donde serán accesibles los atri
 
 <br>
 
-<img class="differentSize" src="/assets/img/herenciajava/diagrama.png" alt="diagrama" style="margin:auto; display:block;">
+<img class="differentSize65" src="/assets/img/herenciajava/diagrama.png" alt="diagrama" style="margin:auto; display:block;">
 
 <br>
 
@@ -131,6 +131,6 @@ de ésta y luego añadir el atributo que queremos mostrar de la clase hija.
 
 Y hasta aquí este pequeño repaso sobre la herencia en Java, espero que haya sido capaz de explicarlo de una forma sencilla y amena para todo el mundo pero sobretodo que lo hayáis entendido.
 
-Como siempre para cualquier duda y sugerencia no tengais problemas en escribir a mi correo [iam@jmoral.es](mailto:iam@jmoral.es "iam@jmoral.es").
+Como siempre para cualquier duda o sugerencia no tengais problemas en escribir a mi correo [iam@jmoral.es](mailto:iam@jmoral.es "iam@jmoral.es").
 
 Un saludo. ツ
