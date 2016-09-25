@@ -15,7 +15,7 @@ Desde hace un tiempo quería hacer una página web en la que pudiese subir posts
 Estuve barajando la opción de hacerla con el archiconocido [WordPress](https://es.wordpress.com/ "WordPress") y no complicarme mucho, sin embargo un familiar me nombró [Jekyll](https://jekyllrb.com/ "Jekyll"),
 así que investigué que era eso de Jekyll además del conocido Dr. Jekyll.
 
-![jekyll](/assets/img/jekyll_logo.png)
+![jekyll](/assets/img/jekyll/jekyll_logo.png)
 
 Jekyll, como bien indican en su web con *transform your plain text into static websites and blogs*, es una manera sencilla de hacer una página web o blog de forma estática, es decir, sin necesidad
 de una base de datos detrás para generar todo el contenido, por lo que se gana muchísima rapidez en ésta.

@@ -27,7 +27,7 @@ Ahora deberíamos ser capaces de entender desde donde serán accesibles los atri
 
 <br>
 
-<img class="differentSize" src="/assets/img/diagrama.png" alt="diagrama" style="margin:auto; display:block;">
+<img class="differentSize" src="/assets/img/herenciajava/diagrama.png" alt="diagrama" style="margin:auto; display:block;">
 
 <br>
 

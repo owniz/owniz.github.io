@@ -48,7 +48,7 @@ Ejemplo:
 | P2       | 2        | 3              |
 | P3       | 4        | 3              |
 
-<img class="differentSize" src="/assets/img/fcfs.png" alt="fcfs" style="margin:left; display:block;">
+<img class="differentSize" src="/assets/img/procesos/fcfs.png" alt="fcfs" style="margin:left; display:block;">
 
 <br>
 
@@ -67,7 +67,7 @@ Ejemplo:
 | P3       | 4        | 1              |
 | P4       | 5        | 4              |
 
-<img class="differentSize" src="/assets/img/sjf.png" alt="sjf" style="margin:left; display:block;">
+<img class="differentSize" src="/assets/img/procesos/sjf.png" alt="sjf" style="margin:left; display:block;">
 
 SFJ es un método no exclusivo pero tiene una variante llamada SRTF que explicaré más abajo.
 
@@ -87,7 +87,7 @@ Ejemplo:
 | P3       | 4        | 1              |
 | P4       | 5        | 4              |
 
-<img class="differentSize" src="/assets/img/srtf.png" alt="srtf" style="margin:left; display:block;">
+<img class="differentSize" src="/assets/img/procesos/srtf.png" alt="srtf" style="margin:left; display:block;">
 
 <br>
 
@@ -115,7 +115,7 @@ Ejemplo con *quantum* = 4:
 | P2       | 1        | 6              |
 | P3       | 2        | 3              |
 
-<img class="differentSize" src="/assets/img/round-robin.png" alt="Round Robin" style="margin:left; display:block;">
+<img class="differentSize" src="/assets/img/procesos/round-robin.png" alt="Round Robin" style="margin:left; display:block;">
 
 # Comparativa.
 
