@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Jekyll&nbsp;¿Por&nbsp;qué?
+title: Jekyll ¿Por qué?
 category: general
 permalink: "blog/jekyll-por-que"
 published: yes
