@@ -188,7 +188,7 @@ public class PruebaArrayList {
 					System.out.println("\n\tDatos introducidos: " + arrayMetodoEjercicio02);
 					break;
 				case 3:
-					if(arrayMetodoEjercicio02.isEmpty() 
+					if(arrayMetodoEjercicio02.isEmpty()) 
 						System.out.println("\n\tPrimero llama al método 2 para rellenar el ArrayList");
 					else 
 						ejercicio03(arrayMetodoEjercicio02);
@@ -324,7 +324,7 @@ public static void main(String[] args) {
 				System.out.println("\n\tDatos introducidos: " + arrayMetodoEjercicio02);
 				break;
 			case 3:
-				if(arrayMetodoEjercicio02.isEmpty() 
+				if(arrayMetodoEjercicio02.isEmpty()) 
 					System.out.println("\n\tPrimero llama al método 2 para rellenar el ArrayList");
 				else 
 					ejercicio03(arrayMetodoEjercicio02);
