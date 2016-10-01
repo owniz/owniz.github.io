@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Herencia en Java
+title: Herencia&nbsp;en&nbsp;Java
 category: [AD, java]
 permalink: "blog/herencia-java"
 published: yes
