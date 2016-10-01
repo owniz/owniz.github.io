@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Algoritmos de planificación de procesos
+title: Algoritmos&nbsp;de&nbsp;planificación&nbsp;de&nbsp;procesos
 category: [PSP, general]
 permalink: "blog/planificacion-procesos"
 published: yes

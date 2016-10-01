@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ¡Hola mundo!
+title: ¡Hola&nbsp;mundo!
 category: general
 permalink: "blog/hola-mundo"
 published: yes
