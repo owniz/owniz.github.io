@@ -301,7 +301,6 @@ img.differentSize40 {
 			}
 		}
 		code {
-			padding: 3px;
 			font-size: 0.9em;
 			border-radius: 3px;
 			background: $color-grey;
@@ -419,4 +418,9 @@ h2.category_header {
 nav {
 	text-align: right;
 	margin-bottom: 10px;
+}
+
+.share {
+	padding-top: 30px;
+	text-align: right;
 }
