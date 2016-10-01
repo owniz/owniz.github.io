@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ArrayList&nbsp;y&nbsp;StringTokenizer&nbsp;para&nbsp;dummies
+title: ArrayList y StringTokenizer para dummies
 category: [AD, java]
 permalink: "blog/ArrayList-StringTokenizer"
 published: yes
