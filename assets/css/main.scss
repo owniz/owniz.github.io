@@ -29,14 +29,13 @@ i {
 
 table {
 	border-collapse: collapse;
-    border: 2px solid $color-white;
-    margin-bottom: 16px;
-    @media screen and (max-width: $br) {
-    	border: none;
-		display: block;
-		overflow-x: scroll;
-    	overflow-y: hidden;
-		
+  border: 2px solid $color-white;
+  margin-bottom: 16px;
+  @media screen and (max-width: $br) {
+  border: none;
+	display: block;
+	overflow-x: scroll;
+	overflow-y: hidden;
 	}
 }
 
@@ -44,24 +43,24 @@ th {
 	background-color: $color-grey;
 	vertical-align: middle;
 	font-weight: bold;
-    border: 1px solid $color-white;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 4px;
-    padding-bottom: 4px;
+  border: 1px solid $color-white;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 4px;
+	padding-bottom: 4px;
 }
 
 tr:nth-child(even) {
-    background-color: $color-black;
+  background-color: $color-black;
 }
 
 td {
 	vertical-align: middle;
-    border: 1px solid $color-white;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 4px;
-    padding-bottom: 4px;
+  border: 1px solid $color-white;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 blockquote {
@@ -99,18 +98,18 @@ blockquote {
   color: $color-link;
   text-decoration: none;
   &:visited {
-	color: $color-link;
-	text-decoration: none;
+		color: $color-link;
+		text-decoration: none;
   }
   &:hover {
-	color: $color-link;
-	text-decoration: none;
-	padding-bottom: 1px;
-	border-bottom: 1px solid $color-link;
+		color: $color-link;
+		text-decoration: none;
+		padding-bottom: 1px;
+		border-bottom: 1px solid $color-link;
   }
   &:active {
-	color: $color-link;
-	text-decoration: none;
+		color: $color-link;
+		text-decoration: none;
   }
 }
 ul {
@@ -119,7 +118,7 @@ ul {
 		padding: 5px;
 		padding-left: 10px;
 		@media screen and (max-width: $br) {
-			padding: 10px 0 10px 0;
+		padding: 10px 0 10px 0;
 		}
 	}
 }
@@ -165,10 +164,9 @@ img.differentSize40 {
 	margin: auto;
 	padding: 25px 30px 60px 30px;
 	@media screen and (max-width: $br) {
-		padding: 20px;
+	padding: 20px;
 	}
 }
-
 
 .nav {
 	text-align: center;
@@ -187,7 +185,6 @@ img.differentSize40 {
 			display: inline;
 			padding: 0;
 			padding-left: 5px;
-
 		}
 	}
 }
@@ -215,22 +212,22 @@ img.differentSize40 {
 	&__share {
 		padding-top: 30px;
 		text-align: right;
-		a.share {
+		a.sharebutton {
 			border-radius: 3px;
 			text-decoration: none;
 			padding: 4px;
-			background:$color-link;
+			background: $color-link;
 			color: $color-twitter;
 			&:hover {
-				color: $color-twitter;
-				padding: 4px;
+				background: $color-twitter;
+				color: $color-link;
 				border-bottom: none;
 			}
 		}
 	}
 	&__back {
 		a {
-			
+
 		}
 	}
 	&__title {
@@ -280,7 +277,7 @@ img.differentSize40 {
 		a {
 			padding-bottom: 1px;
 			&:hover {
-				
+
 			}
 		}
 		strong {
@@ -410,12 +407,12 @@ h2.category_header {
 	text-decoration: underline;
 }
 
-#category_selector { 
+#category_selector {
 	border: 2px solid $color-white;
 	font-size: 1em;
-	color: $color-white; 
+	color: $color-white;
 	background-color: $color-black;
-	padding: 5px; 
+	padding: 5px;
 	width: 100%;
 	margin-bottom: 10px;
 	text-transform: capitalize;
@@ -433,4 +430,3 @@ nav {
 	text-align: right;
 	margin-bottom: 10px;
 }
-
