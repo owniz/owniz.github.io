@@ -9,7 +9,7 @@ body {
 	margin-left: calc(50vw - (100% / 2));
 	overflow-x: hidden;
 	color: $color-white;
-	background: #1C1C1C;
+	background: $color-background;
 	font-family: 'Inconsolata', ;
 	font-size: 100%;
 	font-weight: 400;
@@ -212,6 +212,22 @@ img.differentSize40 {
 #post {
 	text-align: left;
 	padding-bottom: 30px;
+	&__share {
+		padding-top: 30px;
+		text-align: right;
+		a {
+			border-radius: 3px;
+			text-decoration: none;
+			padding: 4px;
+			background:$color-link;
+			color:$color-twitter;
+			&:hover {
+				color:$color-twitter;
+				padding: 4px;
+				border-bottom: none;
+			}
+		}
+	}
 	&__back {
 		a {
 			
@@ -263,10 +279,8 @@ img.differentSize40 {
 		}
 		a {
 			padding-bottom: 1px;
-			border-bottom: 1px solid $color-link;
 			&:hover {
-				background-color: $color-grey;
-				text-decoration: none;
+				
 			}
 		}
 		strong {
@@ -400,7 +414,7 @@ h2.category_header {
 	border: 2px solid $color-white;
 	font-size: 1em;
 	color: $color-white; 
-	background-color: #272727;
+	background-color: $color-black;
 	padding: 5px; 
 	width: 100%;
 	margin-bottom: 10px;
@@ -420,11 +434,3 @@ nav {
 	margin-bottom: 10px;
 }
 
-.share {
-	padding-top: 30px;
-	text-align: right;
-}
-
-.share a:hover {
-	border-bottom: none !important;
-}
