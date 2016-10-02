@@ -215,14 +215,14 @@ img.differentSize40 {
 	&__share {
 		padding-top: 30px;
 		text-align: right;
-		a {
+		a.share {
 			border-radius: 3px;
 			text-decoration: none;
 			padding: 4px;
 			background:$color-link;
-			color:$color-twitter;
+			color: $color-twitter;
 			&:hover {
-				color:$color-twitter;
+				color: $color-twitter;
 				padding: 4px;
 				border-bottom: none;
 			}
