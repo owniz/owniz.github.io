@@ -27,7 +27,7 @@ Tenemos también esta definición más técnica sacada directamente desde la [Wi
 
 # Clase File
 
-Las clases de lectura y escritura de archivos son susceptibles de generar excepciones, por lo que debemos tratarlas siempre con *try/catch* y además tener la buena costumbre de utilizar el método `close()` para cerrarlos.
+Las clases de lectura y escritura de archivos son susceptibles de generar excepciones, por lo que debemos tratarlas siempre con *try/catch* y además tener la buena costumbre de utilizar el método *`close()`* para cerrarlos.
 
 ```java
 // Este ejemplo de uso del try/catch escribe en un archivo txt,
