@@ -8,11 +8,11 @@ published: yes
 
 <br>
 
-Hola, hoy hablaré sobre como podemos trabajar con archivos desde Java, nombrando las clases más utilizadas para ello y como utilizarlas a través de algún ejemplo.
+Hola, hoy hablaré sobre como podemos trabajar con archivos desde Java, nombrando las clases más utilizadas para ello y cómo usarlas a través de algún ejemplo.
 
-<img class="differentSize40" src="/assets/img/archivosjava/txt-java.png" alt="txt" style="margin:auto; display:block;">
+<img src="/assets/img/archivosjava/txt-java.png" alt="txt" style="width:35%; margin:auto; display:block;">
 
-# Archivos, ¿Qué son?
+# Archivos, ¿qué son?
 
 Antes de hablar sobre cómo gestionamos los archivos debemos de conocer qué son, para ello tenemos esta sencilla explicación: un archivo es un conjunto de datos estructurados guardados en algún medio de almacenamiento que pueden ser utilizados por aplicaciones.
 
@@ -21,7 +21,7 @@ Está compuesto por:
 * **Nombre**: Identificación del archivo.
 * **Extensión**: Indica el tipo de archivo.
 
-Tenemos también esta definición más técnica sacada directamente desde la [Wikipedia](https://es.wikipedia.org/wiki/Archivo_(inform%C3%A1tica) "Wikipedia")
+Tenemos también esta definición más técnica sacada directamente de la [Wikipedia](https://es.wikipedia.org/wiki/Archivo_(inform%C3%A1tica) "Wikipedia")
 
 > Un archivo o fichero informático es un conjunto de bits que son almacenados en un dispositivo. Un archivo es identificado por un nombre y la descripción de la carpeta o directorio que lo contiene. A los archivos informáticos se les llama así porque son los equivalentes digitales de los archivos escritos en expedientes, tarjetas, libretas, papel o microfichas del entorno de oficina tradicional.
 
@@ -31,7 +31,7 @@ Las clases de lectura y escritura de archivos son susceptibles de generar excepc
 
 ```java
 // Este ejemplo de uso del try/catch escribe en un archivo txt,
-// el cual se ha creado desde Arguments, números aleatorios entre 1 y 10
+// el cual se ha pasado el nombre desde Arguments, números aleatorios entre 1 y 10
 try {
   FileWriter fichero = new FileWriter(args[0]);
   PrintWriter pw = new PrintWriter(fichero);
@@ -57,7 +57,7 @@ Además disponemos de estos métodos para gestionarlos:
 
 | Método | Descripción |
 |:-:|:-|
-| *creatNewFile()* | Crea (si se puede) el fichero indicado |
+| *createNewFile()* | Crea (si se puede) el fichero indicado |
 | *delete()* | Borra el fichero indicado |
 | *mkdirs()* | Crea el directorio indicado |
 | *getName()* | Devuelve un *String* con el nombre del fichero |
@@ -76,7 +76,7 @@ Además disponemos de estos métodos para gestionarlos:
 
 # Clases FileWriter y PrintWriter
 
-Con estas clases somos capaces de escribir en los archivos, por un lado tenemos **FileWriter** que nos permite escribir caracteres y se usa para escribir texto en un archivo de texto y por el otro lado **PrintWriter** que se utiliza para escribir en archivos de texto, o dicho de otra forma más coloquial, **FileWriter** nos prepara el archivo para que podamos escribir desde **Printwriter**.
+Ambas clases sirven para escribir caracteres en ficheros, simplemente **PrintWriter** es una mejora de la clase **FileWriter** (comparten el mismo padre **java.io.Writer**) que nos permite utilizar métodos adicionales.
 
 ```java
 // Este ejemplo pregunta a un usuario unos datos para luego
@@ -88,6 +88,8 @@ String[] nombre = new String[numPersonas];
 String[] apellido = new String[numPersonas];
 
 try {
+  // aunque no se utilice normalmente de esta forma aquí
+  // os pongo un ejemplo de uso para ambas clases
   FileWriter fichero = new FileWriter("ejercicio1.txt");
   PrintWriter pw = new PrintWriter(fichero);
 
@@ -120,7 +122,7 @@ De los métodos más útiles podemos destacar:
 |:-:|:-|
 | **FileWritter** ||
 | *write()* | Escribe uno o varios caracteres |
-| *flush()* | Escribe los datos almacenados en el *buffer* en el archivo |
+| *flush()* | Limpia el flujo de datos |
 | *close()* | Cierra **FileWriter** para terminar la gestión con el archivo (internamente llama al método *flush()*) |
 | **PrintWriter** ||
 | *println()* | Escribe en el archivo el parámetro que le introduzcamos |
@@ -130,7 +132,7 @@ De los métodos más útiles podemos destacar:
 
 # Clases FileReader y BufferedReader
 
-Estas clases son las que necesitaremos para el leer el contenido de los archivos, tenemos a **FileReader** que nos permite leer caracteres y se usa para leer el contenido de un archivo de texto y **BufferedReader** clase muy utilizada para leer archivos de texto plano. De una forma similar a las clases de escritura, **FileReader** nos prepara el archivo para leerlo desde **BufferedReader**.
+Es una buena práctica utilizar estas clases conjuntamente pues **FileReader** simplemente lee caracteres de un fichero y **BufferedReader** nos ayuda a guardarlos en un *buffer* para tratarlos de una forma más segura.
 
 ```java
 // Este fragmento de código lee un archivo
@@ -168,7 +170,7 @@ Los métodos con los que comúnmente trabajaremos son:
 
 <br>
 
-Todos estos ejemplos están sacados de una actividad que realicé donde [estudio](http://www.campusaula.com/ "Aula Campus") para el módulo de acceso a datos, así que os pondré el código entero (oculto para no extender mucho el *post*) por si alguien quiere darle un vistazo junto al enunciado de cada ejercicio (4 en total).
+Todos estos ejemplos están sacados de una actividad que realicé donde [estudio](http://www.campusaula.com/ "Aula Campus") para el módulo de Acceso a datos, así que os pondré el código entero (oculto para no extender mucho el *post*) por si alguien quiere darle un vistazo junto al enunciado de cada ejercicio (4 en total).
 
 Para cualquier duda con respecto a este *post* o el código tenéis mi correo electrónico [iam@jmoral.es](mailto:iam@jmoral.es "iam@jmoral.es") para que podáis escribirme o mi Twitter [@owniz](https://twitter.com/owniz "Twitter").
 

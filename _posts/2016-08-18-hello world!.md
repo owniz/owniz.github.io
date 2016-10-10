@@ -106,13 +106,13 @@ o podemos poner `<img src="/assets/img/holamundo/kodama.jpg" alt="kodama" style=
 para tablas podemos usar
 
 	| Título 1     | Título 2     | Titulo 3  |
-	| ------------ |:------------:| ---------:| 
+	| ------------ |:------------:| ---------:|
 	| izquierda    | centrado     | derecha   |
 	| uno          | dos          |   tres    |
 
 
 | Título 1     | Título 2     | Titulo 3  |
-| ------------ |:------------:| ---------:| 
+| ------------ |:------------:| ---------:|
 | izquierda    | centrado     | derecha   |
 | uno          | dos          |   tres    |
 | uno          | dos          |   tres    |
@@ -120,7 +120,7 @@ para tablas podemos usar
 
 <hr class="codebreak">
 
-# Prueba de texto largo separado por párrafos y con blockquotes para usarlos poner `> ` &nbsp;delante del párrafo
+# Prueba de texto largo separado por párrafos y con blockquotes para usarlos poner `> ` &delante del párrafo
 
 Lorem ipsum dolor sit amet, suas magna dicta qui ei, no vix graecis iracundia, mei eruditi perfecto ut. Placerat necessitatibus nam ne, ne mediocrem abhorreant has. Nec primis legimus menandri at, ad autem apeirian similique vim, impetus reformidans eos et. Zril officiis erroribus ut eum, ex duo vero prima omittantur, id cum mundi facilisi indoctum. Omnis eripuit liberavisse his no, vis ei sumo dico utinam, enim ornatus consequat his eu.
 
