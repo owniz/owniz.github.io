@@ -38,7 +38,7 @@ File nombreFile = new File(“/carpeta/archivo”);
 y borrarlos con:
 
 ```java
-  nombreFile.delete();
+nombreFile.delete();
 ```
 
 Además de los anteriores disponemos de estos métodos para gestionarlos:
@@ -225,7 +225,7 @@ Si queremos comparar el texto que contiene un archivo con un texto que introduzc
 ```java
 String lineaAComparar = "hola mundo";
 
-if(lineaArchivo.toLowerCase().trim().equals(lineaAComparar))
+if(lineaArchivo.toLowerCase().trim().equals(lineaAComparar.toLowerCase().trim()))
 ```
 
 Como viene siendo habitual antes de despedirme recordaros que para cualquier duda con respecto a este *post* o el código tenéis mi correo electrónico [iam@jmoral.es](mailto:iam@jmoral.es "iam@jmoral.es") para que podáis escribirme o contactar a través de mi  Twitter [@owniz](https://twitter.com/owniz "Twitter").
