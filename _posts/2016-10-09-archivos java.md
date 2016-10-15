@@ -8,7 +8,7 @@ published: yes
 
 <br>
 
-Hola, hoy hablaré sobre como podemos trabajar con archivos desde Java, nombrando las clases más utilizadas para ello y cómo usarlas a través de algún ejemplo.
+Hola lectores, hoy hablaré sobre cómo podemos trabajar con archivos desde Java, nombrando las clases más utilizadas para ello y cómo usarlas a través de algún ejemplo.
 
 <img src="/assets/img/archivosjava/txt-java.png" alt="txt" style="width:35%; margin:auto; display:block;">
 
@@ -27,27 +27,9 @@ Tenemos también esta definición más técnica sacada directamente de la [Wikip
 
 # Clase File
 
-Las clases de lectura y escritura de archivos son susceptibles de generar excepciones, por lo que debemos tratarlas siempre con *try/catch* y además tener la buena costumbre de utilizar el método *`close()`* para cerrarlos.
+La clase **File** además de proporcionarnos información sobre los archivos y directorios nos permite crearlos y eliminarlos.
 
-```java
-// Este ejemplo de uso del try/catch escribe en un archivo txt,
-// el cual se ha pasado el nombre desde Arguments, números aleatorios entre 1 y 10
-try {
-  FileWriter fichero = new FileWriter(args[0]);
-  PrintWriter pw = new PrintWriter(fichero);
-
-  for(int i = 0; i < 10; i++) {
-    pw.println(i + 1);
-    System.out.println(i + 1);
-  }
-
-  pw.close();
-} catch(IOException e) {
-  e.printStackTrace();
-}
-```
-
-Esta clase nos permite crear los archivos utilizando:
+Para ello esta clase nos permite crearlos utilizando:
 
 ```java
 File nombreArchivo = new File(“/carpeta/archivo”);
@@ -74,13 +56,74 @@ Además disponemos de estos métodos para gestionarlos:
 | *lastModified()* | Devuelve la última hora de modificación del archivo |
 | *length()* | Devuelve la longitud del archivo |
 
+Ya que somos capaces de trabajar tanto archivos como directorios tenemos métodos que nos permiten diferenciarlos. Debajo de estas líneas tenemos un ejemplo para ello.
+
+```java
+/* En este ejemplo asignamos la ruta del directorio utilizando
+   la primera posición el Array args[] del método main. En este segmento
+   de código comprobamos si la ruta ha sido enviada correctamente
+   a través del if para luego comprobar también si el fichero existe,
+   si existe guarda los nombres del contenido del directorio en un Array
+   para mostrarlos luego gracias al foreach */
+if(args.length > 0) {
+  File f = new File(args[0]);
+
+    if(f.isDirectory()) {
+      File[] ficheros = f.listFiles();
+
+      System.out.println("Lista de los nombres de ficheros dentro del directorio");
+
+      for(File file : ficheros)
+        System.out.println("\t" + file.getName());
+    }
+}
+```
+
+A la hora de pasar el nombre de un archivo a través del Array *args[]* podemos comprobar si este existe o no, para que lo cree en caso contrario, y evitar posibles errores utilizando el código a continuación.
+
+```java
+if(args.length > 0) {
+  File fichero = new File(args[0]);
+
+  if(!fichero.exists()) {
+    try {
+      fichero.createNewFile();
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+Las demás clases de lectura y escritura de archivos que veremos a continuación son susceptibles de generar excepciones, por lo que debemos tratarlas siempre con *try/catch* y además tener la buena costumbre de utilizar el método *`close()`* para cerrarlos.
+
+Un ejemplo por adelantado:
+
+```java
+/* Este ejemplo de uso del try/catch escribe en un archivo txt,
+   números aleatorios entre 1 y 10 */
+try {
+  FileWriter fl = new FileWriter("test.txt");
+  PrintWriter pw = new PrintWriter(fl);
+
+  for(int i = 0; i < 10; i++) {
+    pw.println(i + 1);
+    System.out.println(i + 1);
+  }
+
+  pw.close();
+} catch(IOException e) {
+  e.printStackTrace();
+}
+```
+
 # Clases FileWriter y PrintWriter
 
 Ambas clases sirven para escribir caracteres en ficheros, simplemente **PrintWriter** es una mejora de la clase **FileWriter** (comparten el mismo padre **java.io.Writer**) que nos permite utilizar métodos adicionales.
 
 ```java
-// Este ejemplo pregunta a un usuario unos datos para luego
-// almacenarlos en el archivo ejercicio1.txt
+/* Este ejemplo pregunta a un usuario unos datos para luego
+   almacenarlos en el archivo ejercicio1.txt */
 int numPersonas = 5;
 
 int[] edad = new int[numPersonas];
@@ -88,8 +131,10 @@ String[] nombre = new String[numPersonas];
 String[] apellido = new String[numPersonas];
 
 try {
-  // aunque no se utilice normalmente de esta forma aquí
-  // os pongo un ejemplo de uso para ambas clases
+  /* Aunque no se utilice normalmente de esta forma aquí
+     os pongo un ejemplo de uso para ambas clases,
+     le preguntamos a un usuario una serie de datos que
+     almacenará en un archivo txt  */
   FileWriter fichero = new FileWriter("ejercicio1.txt");
   PrintWriter pw = new PrintWriter(fichero);
 
@@ -106,18 +151,14 @@ try {
     pw.println("\nUsuario " + (i + 1) + "\tNombre: " + nombre[i] + "\tApellido: "
               + apellido[i] + "\tEdad: " + edad[i]);
   }
+
+  pw.close();
 } catch(IOException e) {
   e.printStackTrace();
-} finally {
-  try {
-    fichero.close();
-  } catch (IOException e) {
-    e.printStackTrace();
-  }
+}
 ```
 
 De los métodos más útiles podemos destacar:
-
 
 |:-:|:-|
 | **FileWritter** ||
@@ -135,8 +176,8 @@ De los métodos más útiles podemos destacar:
 Es una buena práctica utilizar estas clases conjuntamente pues **FileReader** simplemente lee caracteres de un fichero y **BufferedReader** nos ayuda a guardarlos en un *buffer* para tratarlos de una forma más segura.
 
 ```java
-// Este fragmento de código lee un archivo
-// y lo muestra por la consola
+/* Este fragmento de código lee un archivo
+   y lo muestra por la consola */
 File f = new File("ejercicio1.txt");
 
 try {
@@ -168,241 +209,16 @@ Los métodos con los que comúnmente trabajaremos son:
 | *skip()* | Se salta "n" caracteres |
 | *close()* | Cierra la lectura del archivo |
 
-<br>
+## Comparar líneas
 
-Todos estos ejemplos están sacados de una actividad que realicé donde [estudio](http://www.campusaula.com/ "Aula Campus") para el módulo de Acceso a datos, así que os pondré el código entero (oculto para no extender mucho el *post*) por si alguien quiere darle un vistazo junto al enunciado de cada ejercicio (4 en total).
-
-Para cualquier duda con respecto a este *post* o el código tenéis mi correo electrónico [iam@jmoral.es](mailto:iam@jmoral.es "iam@jmoral.es") para que podáis escribirme o mi Twitter [@owniz](https://twitter.com/owniz "Twitter").
-
-[spoiler]
-
-> Ejercicio 1
->
-> * Crea una clase Ejercicio1 en la que se creará un fichero “ejercicio1.txt”.
-> * Dicho fichero lo creará en el mismo directorio en el que se encuentra dicho proyecto del *workspace*.
-> * El contenido del fichero será el nombre, apellido y edad de cinco personas que habremos solicitado al usuario.
-> * Además de rellenar el contenido del fichero, mostraremos por pantalla dicha información.
+Si queremos comparar el texto que contiene un archivo con un texto que introduzcamos nosotros, a través de un *String* por ejemplo, hemos de ser conscientes que existe la posibilidad de que las mayúsculas no nos coincidan o incluso que se nos colara algún espacio doble entre dos palabras, para ello podemos utilizar los métodos *`toLowerCase()`* para pasar todo el texto a minúscula o *`toUpperCase()`* para mayúscula y también utilizar el método *`trim()`* para quitar todos los espacios.
 
 ```java
-package es.jmoral.ad;
+String linea = "hola mundo";
 
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-
-public class Ejercicio1 {
-	public static void main(String[] args) {
-
-		int numPersonas = 5;
-
-		int[] edad = new int[numPersonas];
-		String[] nombre = new String[numPersonas];
-		String[] apellido = new String[numPersonas];
-
-		FileWriter fichero = null;
-		PrintWriter pw = null;
-
-		try {
-			fichero = new FileWriter("ejercicio1.txt");
-			pw = new PrintWriter(fichero);
-
-			for(int i = 0; i < numPersonas; i++) {
-				System.out.print("\nDime el nombre del usuario " + (i + 1) + ": ");
-				nombre[i] = Entrada.cadena();
-
-				System.out.print("Dime el apellido del usuario " + (i + 1) + ": ");
-				apellido[i] = Entrada.cadena();
-
-				System.out.print("Dime la edad del usuario " + (i + 1) + ": ");
-				edad[i] = Entrada.entero();
-
-				pw.println("\nUsuario " + (i + 1) + "\tNombre: " + nombre[i] + "\tApellido: " + apellido[i] + "\tEdad: " + edad[i]);
-			}
-		} catch(IOException e) {
-			e.printStackTrace();
-		} finally {
-			try {
-				fichero.close();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
-
-		System.out.println("\nDatos de usuario:");
-
-		for(int i = 0; i < numPersonas; i++) {
-			System.out.println("\n\tUsuario " + (i + 1) + "\n\t\tNombre: " + nombre[i] + "\n\t\tApellido: " + apellido[i] + "\n\t\tEdad: " + edad[i]);
-		}
-	}
-}
+if(linea.toLowerCase().trim().equals(linea))
 ```
 
-[/spoiler]
-
-[spoiler]
-
-> Ejercicio 2
->
-> * Crea una clase Ejercicio2 la cual accederá al ya creado archivo “ejercicio1.txt”.
-> * Mostraremos por pantalla información referente a dicho archivo: nombre, ruta absoluta y longitud del fichero en bytes.
-> * Leerá dicho contenido y lo mostrará por pantalla.
-> * Una vez leído y mostrado el contenido del fichero volverá a acceder al mismo añadiendo la siguiente linea: “Añadiendo contenido del ejercicio02”.
-
-```java
-package es.jmoral.ad;
-
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-
-public class Ejercicio2 {
-	public static void main(String[] args) {
-
-		File f = new File("ejercicio1.txt");
-
-		try {
-
-			FileReader fr = new FileReader(f);
-			BufferedReader br = new BufferedReader(fr);
-
-			System.out.println("\nNombre del fichero: " + f.getName());
-			System.out.println("Ruta Absoluta del fichero: " + f.getAbsolutePath());
-			System.out.println("Longitud del fichero en bytes: " + f.length());
-
-			String linea = br.readLine();
-
-			System.out.println();
-
-			while(linea != null) {
-				System.out.println(linea);
-				linea = br.readLine();
-			}
-
-			fr.close();
-
-			FileWriter fichero = new FileWriter("ejercicio1.txt", true);
-			PrintWriter pw = new PrintWriter(fichero);
-
-			pw.println();
-			pw.println("A�adiendo contenido del ejercicio02");
-
-			pw.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-}
-
-```
-
-[/spoiler]
-
-[spoiler]
-
-> Ejercicio 3
->
-> * Crea una clase Ejercicio3, recibirá como argumento de entrada un nombre de archivo “Entrada.txt”.
-> * Utilizaremos dicho nombre para crear un archivo.
-> * El contenido del fichero lo rellenaremos haciendo uso de un bucle *for* y escribiendo de 1 a 10.
-
-```java
-package es.jmoral.ad;
-
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-
-public class Ejercicio3 {
-	public static void main(String[] args) {
-
-		try {
-
-			FileWriter fichero = new FileWriter(args[0]);
-			PrintWriter pw = new PrintWriter(fichero);
-
-			for(int i = 0; i < 10; i++) {
-				pw.println(i + 1);
-
-				System.out.println(i + 1);
-			}
-
-			pw.close();
-		} catch(IOException e) {
-			e.printStackTrace();
-		}
-	}
-}
-```
-
-[/spoiler]
-
-[spoiler]
-
->Ejercicio 4
->
-> * Creamos una clase Ejercicio4.
-> * Leemos el contenido del archivo de texto “Entrada.txt” creado anteriormente.
-> * A partir de ese contenido creamos un fichero de texto “Salida.txt” cuyo contenido sea el factorial de cada uno de los valores leídos del fichero Entrada.
-> * Para calcular el factorial crear un método llamado factorial estático en la propia clase.
-> * Por último mostrar los valores calculados con la función factorial.
-
-```java
-package es.jmoral.ad;
-
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-
-public class Ejercicio4 {
-	public static int factorial(int linea) {
-		if(linea == 0)
-			return 1;
-		else
-			return linea * factorialEstatico(linea - 1);
-	}
-
-	public static void main(String[] args) {
-
-		String linea;
-
-		int valorFact;
-
-		File f = new File("Entrada.txt");
-
-		try {
-			FileReader fr = new FileReader(f);
-			BufferedReader br = new BufferedReader(fr);
-
-			linea = br.readLine();
-
-			// create and prepare the new file
-			FileWriter fw = new FileWriter("Salida.txt");
-			PrintWriter pw = new PrintWriter(fw);
-
-			while(linea != null) {
-
-				valorFact = factorialEstatico(Integer.valueOf(linea));
-
-				pw.println(valorFact);
-
-				linea = br.readLine();
-
-				System.out.println(valorFact);
-			}
-			pw.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-}
-```
-
-[/spoiler]
+Como viene siendo habitual antes de despedirme recordaros que para cualquier duda con respecto a este *post* o el código tenéis mi correo electrónico [iam@jmoral.es](mailto:iam@jmoral.es "iam@jmoral.es") para que podáis escribirme o contactar a través de mi  Twitter [@owniz](https://twitter.com/owniz "Twitter").
 
 Un saludo. ツ
