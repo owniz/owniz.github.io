@@ -32,10 +32,16 @@ La clase **File** además de proporcionarnos información sobre los archivos y d
 Para ello esta clase nos permite crearlos utilizando:
 
 ```java
-File nombreArchivo = new File(“/carpeta/archivo”);
+File nombreFile = new File(“/carpeta/archivo”);
 ```
 
-Además disponemos de estos métodos para gestionarlos:
+y borrarlos con:
+
+```java
+  nombreFile.delete();
+```
+
+Además de los anteriores disponemos de estos métodos para gestionarlos:
 
 | Método | Descripción |
 |:-:|:-|
@@ -79,7 +85,7 @@ if(args.length > 0) {
 }
 ```
 
-A la hora de pasar el nombre de un archivo a través del Array *args[]* podemos comprobar si este existe o no, para que lo cree en caso contrario, y evitar posibles errores utilizando el código a continuación.
+A la hora de pasar el nombre de un archivo a través del Array *args[]* podemos comprobar si éste existe o no, para que lo cree en caso contrario, y evitar posibles errores utilizando el código a continuación.
 
 ```java
 if(args.length > 0) {
@@ -193,7 +199,7 @@ try {
     linea = br.readLine();
   }
 
-  fr.close();
+  br.close();
 ```
 
 Los métodos con los que comúnmente trabajaremos son:
@@ -211,12 +217,12 @@ Los métodos con los que comúnmente trabajaremos son:
 
 ## Comparar líneas
 
-Si queremos comparar el texto que contiene un archivo con un texto que introduzcamos nosotros, a través de un *String* por ejemplo, hemos de ser conscientes que existe la posibilidad de que las mayúsculas no nos coincidan o incluso que se nos colara algún espacio doble entre dos palabras, para ello podemos utilizar los métodos *`toLowerCase()`* para pasar todo el texto a minúscula o *`toUpperCase()`* para mayúscula y también utilizar el método *`trim()`* para quitar todos los espacios.
+Si queremos comparar el texto que contiene un archivo con un texto que introduzcamos nosotros, a través de un *String* por ejemplo, hemos de ser conscientes que existe la posibilidad de que las mayúsculas no nos coincidan o incluso que se nos colara algún doble espacio entre dos palabras, para ello podemos utilizar los métodos *`toLowerCase()`* para pasar todo el texto a minúscula o *`toUpperCase()`* para mayúscula y también utilizar el método *`trim()`* para quitar todos los espacios.
 
 ```java
-String linea = "hola mundo";
+String lineaAComparar = "hola mundo";
 
-if(linea.toLowerCase().trim().equals(linea))
+if(lineaArchivo.toLowerCase().trim().equals(lineaAComparar))
 ```
 
 Como viene siendo habitual antes de despedirme recordaros que para cualquier duda con respecto a este *post* o el código tenéis mi correo electrónico [iam@jmoral.es](mailto:iam@jmoral.es "iam@jmoral.es") para que podáis escribirme o contactar a través de mi  Twitter [@owniz](https://twitter.com/owniz "Twitter").
