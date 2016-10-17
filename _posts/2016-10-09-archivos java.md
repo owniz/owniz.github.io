@@ -218,7 +218,7 @@ Los métodos con los que comúnmente trabajaremos son:
 
 ## Comparar líneas
 
-Si queremos comparar el texto que contiene un archivo con un texto que introduzcamos nosotros, a través de un *String* por ejemplo, hemos de ser conscientes que existe la posibilidad de que las mayúsculas no nos coincidan o incluso que se nos colara algún espacio al final o al principio del **String**, para ello podemos utilizar los métodos *`toLowerCase()`* para pasar todo el texto a minúscula o *`toUpperCase()`* para mayúscula y también utilizar el método *`trim()`* para quitar los espacios.
+Si queremos comparar el texto que contiene un archivo con un texto que introduzcamos nosotros, a través de un *String* por ejemplo, hemos de ser conscientes que existe la posibilidad de que las mayúsculas no nos coincidan o incluso que se nos colara algún espacio al final o al principio del *String*, para ello podemos utilizar los métodos *`toLowerCase()`* para pasar todo el texto a minúscula o *`toUpperCase()`* para mayúscula y también utilizar el método *`trim()`* para quitar los espacios.
 
 ```java
 String lineaAComparar = "hola mundo";
