@@ -66,10 +66,10 @@ Ya que somos capaces de trabajar tanto archivos como directorios tenemos método
 
 ```java
 /* En este ejemplo asignamos la ruta del directorio utilizando
-   la primera posición el Array args[] del método main. En este segmento
-   de código comprobamos si la ruta ha sido enviada correctamente
-   a través del if para luego comprobar también si el fichero existe,
-   si existe guarda los nombres del contenido del directorio en un Array
+   la primera posición del array args[] del método main. En este segmento
+   de código comprobamos si el array no está vacío para luego
+   comprobar si el fichero es un directorio, en este caso
+   guarda los nombres del contenido del directorio en un array
    para mostrarlos luego gracias al foreach */
 if(args.length > 0) {
   File f = new File(args[0]);
@@ -85,7 +85,7 @@ if(args.length > 0) {
 }
 ```
 
-A la hora de pasar el nombre de un archivo a través del Array *args[]* podemos comprobar si éste existe o no, para que lo cree en caso contrario, y evitar posibles errores utilizando el código a continuación.
+A la hora de pasar el nombre de un archivo a través del array *args[]* podemos comprobar si éste existe o no, para que lo cree en caso contrario, y evitar posibles errores utilizando el código a continuación.
 
 ```java
 if(args.length > 0) {
@@ -138,9 +138,7 @@ String[] apellido = new String[numPersonas];
 
 try {
   /* Aunque no se utilice normalmente de esta forma aquí
-     os pongo un ejemplo de uso para ambas clases,
-     le preguntamos a un usuario una serie de datos que
-     almacenará en un archivo txt  */
+     os pongo un ejemplo de uso para ambas clases */
   FileWriter fichero = new FileWriter("ejercicio1.txt");
   PrintWriter pw = new PrintWriter(fichero);
 
@@ -183,7 +181,7 @@ Es una buena práctica utilizar estas clases conjuntamente pues **FileReader** s
 
 ```java
 /* Este fragmento de código lee un archivo
-   y lo muestra por la consola */
+   y lo muestra por la terminal */
 File f = new File("ejercicio1.txt");
 
 try {
@@ -220,12 +218,13 @@ Los métodos con los que comúnmente trabajaremos son:
 
 ## Comparar líneas
 
-Si queremos comparar el texto que contiene un archivo con un texto que introduzcamos nosotros, a través de un *String* por ejemplo, hemos de ser conscientes que existe la posibilidad de que las mayúsculas no nos coincidan o incluso que se nos colara algún doble espacio entre dos palabras, para ello podemos utilizar los métodos *`toLowerCase()`* para pasar todo el texto a minúscula o *`toUpperCase()`* para mayúscula y también utilizar el método *`trim()`* para quitar todos los espacios.
+Si queremos comparar el texto que contiene un archivo con un texto que introduzcamos nosotros, a través de un *String* por ejemplo, hemos de ser conscientes que existe la posibilidad de que las mayúsculas no nos coincidan o incluso que se nos colara algún espacio al final o al principio del **String**, para ello podemos utilizar los métodos *`toLowerCase()`* para pasar todo el texto a minúscula o *`toUpperCase()`* para mayúscula y también utilizar el método *`trim()`* para quitar los espacios.
 
 ```java
 String lineaAComparar = "hola mundo";
 
 if(lineaArchivo.toLowerCase().trim().equals(lineaAComparar.toLowerCase().trim()))
+   // Las líneas son iguales
 ```
 
 Como viene siendo habitual antes de despedirme recordaros que para cualquier duda con respecto a este *post* o el código tenéis mi correo electrónico [iam@jmoral.es](mailto:iam@jmoral.es "iam@jmoral.es") para que podáis escribirme o contactar a través de mi  Twitter [@owniz](https://twitter.com/owniz "Twitter").
