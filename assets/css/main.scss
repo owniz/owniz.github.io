@@ -145,8 +145,8 @@ img.inlinetwo {
 	}
 }
 
-img.differentSize65 {
-	width: 65%;
+img.differentSize30 {
+	width: 30%;
 	@media screen and (max-width: $br) {
 		width: 100%;
 	}
@@ -154,6 +154,13 @@ img.differentSize65 {
 
 img.differentSize40 {
 	width: 40%;
+	@media screen and (max-width: $br) {
+		width: 100%;
+	}
+}
+
+img.differentSize65 {
+	width: 65%;
 	@media screen and (max-width: $br) {
 		width: 100%;
 	}
