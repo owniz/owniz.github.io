@@ -2,7 +2,7 @@
 layout: post
 title: Gestión de archivos en Java
 category: [AD, java]
-permalink: "blog/IO-Java"
+permalink: "blog/IO-java"
 published: yes
 ---
 
