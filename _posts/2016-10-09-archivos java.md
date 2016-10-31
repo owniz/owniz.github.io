@@ -32,7 +32,7 @@ La clase **File** además de proporcionarnos información sobre los archivos y d
 Para ello esta clase nos permite crearlos utilizando:
 
 ```java
-File nombreFile = new File(“/carpeta/archivo”);
+File nombreFile = new File("/carpeta/archivo");
 ```
 
 y borrarlos con:
