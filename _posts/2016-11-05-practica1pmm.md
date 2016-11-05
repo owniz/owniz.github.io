@@ -56,7 +56,7 @@ public static final int REQUEST_CODE = 1234;
 
 <img class="differentSize40" src="/assets/img/practica1pmm/main.png" alt="mainactivity" style="margin:auto; display:block;">
 
-<div id="ancla" />Como podemos apreciar en la foto de arriba tenemos unas etiquetas sin datos (*TextView* en **Android**) ya que de momento no hemos introducido ninguno de ellos, un botón para ver en *Google Maps* y otro para editar que nos llevara a la siguiente *activity* para introducir los datos. El botón de "ver en *Google Maps* esta desactivado, ya veremos más adelante el por qué.</div>
+<div id="ancla">Como podemos apreciar en la foto de arriba tenemos unas etiquetas sin datos (*TextView* en **Android**) ya que de momento no hemos introducido ninguno de ellos, un botón para ver en *Google Maps* y otro para editar que nos llevara a la siguiente *activity* para introducir los datos. El botón de "ver en *Google Maps* esta desactivado, ya veremos más adelante el por qué.</div>
 
 <img class="differentSize40" src="/assets/img/practica1pmm/second.png" alt="secondctivity" style="margin:auto; display:block;">
 
