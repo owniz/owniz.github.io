@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Odoo, creacion de una multicompañía
-category: [SGE]
+category: SGE
 permalink: "blog/odoo-multicompanyia"
 published: yes
 ---
