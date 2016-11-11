@@ -159,6 +159,13 @@ img.differentSize40 {
 	}
 }
 
+img.differentSize50 {
+	width: 50%;
+	@media screen and (max-width: $br) {
+		width: 100%;
+	}
+}
+
 img.differentSize65 {
 	width: 65%;
 	@media screen and (max-width: $br) {
