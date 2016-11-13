@@ -173,6 +173,13 @@ img.differentSize65 {
 	}
 }
 
+img.differentSize80 {
+	width: 80%;
+	@media screen and (max-width: $br) {
+		width: 100%;
+	}
+}
+
 .main {
 	max-width: 700px;
 	margin: auto;
