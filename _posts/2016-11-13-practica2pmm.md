@@ -26,7 +26,7 @@ Con la llegada de pantallas más grandes (sobre todo para las *tablets*) era dif
 
 ## Interfaz
 
-Las interfaces las podemos definir como un conjunto de métodos que tienen que implementarse cuando utilizando *implements* en una clase. Se define qué métodos va a contener pero no su funcionamiento, por lo que el desarrollador que los implemente tiene que definir la lógica de éstos.
+Las interfaces las podemos definir como un conjunto de métodos que tienen que implementarse cuando utilizamos *implements* en una clase. Se define qué métodos va a contener pero no su funcionamiento, por lo que el desarrollador que los implemente tiene que definir la lógica de éstos.
 
 ## Callbacks
 
@@ -34,7 +34,7 @@ Los **callbacks** son los métodos que definimos para pasar información entre c
 
 ## Método *onSaveInstanceState()*
 
-Este método lo podemos utilizar para guardar el estado de una aplicación, por ejemplo para recuperar los datos cuando giremos el dispositivo, ya que cada vez que giramos el dispositivo todo se vuelve a inflar, estos datos los podemos recuperar desde el ***Bundle*** que tienen como parámetro los métodos *onCreate()* y *onCreateView()* (método nuevo que veremos hoy).
+Este método lo podemos utilizar para guardar el estado de una aplicación, por ejemplo para recuperar los datos cuando giremos el dispositivo, ya que cada vez que giramos el dispositivo todo se vuelve a inflar, estos datos los podemos recuperar desde el ***Bundle*** que tienen como parámetro los métodos *onCreate()* y *onCreateView()*.
 
 # Explicación de la práctica.
 
