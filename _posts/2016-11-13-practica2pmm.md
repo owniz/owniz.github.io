@@ -22,19 +22,19 @@ Repasito rápido de conceptos para entender la APP.
 
 ## *Fragments*
 
-Con la llegada de pantallas más grandes (sobre todo para las *tables*) era difícil adaptar la interfaz para estas así que como solución nacieron los ***fragments***, podemos entenderlos como un contenedor de complementos que se nos mostrará en una porción de la interfaz aunque también puede ocupar toda, más adelante en la explicación de la aplicación se entenderá mejor este concepto viendo un par de fotos de como se ve en móvil y *tablet*.
+Con la llegada de pantallas más grandes (sobre todo para las *tablets*) era difícil adaptar la interfaz para éstas así que como solución nacieron los ***Fragments***, podemos entenderlos como un contenedor de vistas que se nos mostrará en una porción de la interfaz aunque también puede ocupar toda, más adelante en la explicación de la aplicación se entenderá mejor este concepto viendo un par de fotos de cómo se ve en móvil y *tablet*.
 
 ## Interfaz
 
-Con las interfaces podemos definir que conjunto de métodos tienen que implementarse cuando se utilices *implements* en una clase, es importante conocer que defines cuáles serán pero no su funcionamiento, por lo que el desarrollador que los implemente tiene que definir la lógica de éstos.
+Las interfaces las podemos definir como un conjunto de métodos que tienen que implementarse cuando utilizando *implements* en una clase. Se define qué métodos va a contener pero no su funcionamiento, por lo que el desarrollador que los implemente tiene que definir la lógica de éstos.
 
 ## Callbacks
 
-Los **callbacks** son los métodos que definimos para pasar información entre clases. En esta práctica implementaremos una interfaz en las *activities* con unos métodos que hemos definido nosotros en cada *fragment* para poder compartir datos.
+Los **callbacks** son los métodos que definimos para pasar información entre clases. En esta práctica implementaremos una interfaz en las *activities* con unos métodos que hemos definido nosotros en cada *Fragment* para poder compartir datos.
 
 ## Método *onSaveInstanceState()*
 
-Este método lo podemos utilizar para guardar el estado de una aplicación, para por ejemplo recuperar los datos cuando giremos el dispositivo, ya que cada vez que giramos el dispositivo todo se vuelve a inflar, estos datos los podemos recuperar desde el ***Bundle*** que tienen como parámetro los métodos *onCreate()* y *onCreateView()* (método nuevo que veremos hoy).
+Este método lo podemos utilizar para guardar el estado de una aplicación, por ejemplo para recuperar los datos cuando giremos el dispositivo, ya que cada vez que giramos el dispositivo todo se vuelve a inflar, estos datos los podemos recuperar desde el ***Bundle*** que tienen como parámetro los métodos *onCreate()* y *onCreateView()* (método nuevo que veremos hoy).
 
 # Explicación de la práctica.
 
@@ -45,7 +45,7 @@ Esta aplicación tendrá dos tipos de vista según se abra desde un móvil o una
 
 ![tablet](/assets/img/practica2pmm/main-tablet.gif "Tablet")
 
-Una vez vistas las diferencias entre el móvil y *tablet* podemos apreciar para que pueden servir los *fragments*, cuando lo ejecutamos en un móvil necesitamos una actividad que aloje cada uno de ellos mientras que en la *tablet* podemos decirle que la primera actividad contenga a los dos para aprovechar mejor el extra de tamaño en la pantalla.
+Una vez vistas las diferencias entre el móvil y *tablet* podemos apreciar para qué pueden servir los *fragments*, cuando lo ejecutamos en un móvil necesitamos una actividad que aloje cada uno de ellos mientras que en la *tablet* podemos decirle que la primera actividad contenga a los dos para aprovechar mejor el extra de tamaño en la pantalla.
 
 La función de esta prática es averiguar cómo podemos enviar y recibir datos entre fragmentos pasando por las actividades:
 
@@ -60,7 +60,7 @@ En este *post* en vez de ir poniendo trozos de código explicando que hace cada 
 
 <img class="differentSize50" src="/assets/img/practica2pmm/save.gif" alt="save" style="margin:auto; display:block;">
 
-Para poder guardar el estado de la aplicación hemos de sobrescribir el método *onSaveInstanceState()* indicando qué queremos que guarde, pondré como ejemplo el método que nos guarda el nombre que hemos introducido, el cual recupera el valor que tenemos en el **TextView**, en este caso `Nombre: hola`. Este método lo tenemos en la clase que contiene el *fragment*.
+Para poder guardar el estado de la aplicación hemos de sobrescribir el método *onSaveInstanceState()* indicando qué queremos que guarde, pondré como ejemplo el método que nos guarda el nombre que hemos introducido, el cual recupera el valor que tenemos en el **TextView**, en este caso `Nombre: hola`. Este método lo tenemos en la clase que contiene el *Fragment*.
 
 ```java
 @Override
@@ -71,7 +71,7 @@ public void onSaveInstanceState(Bundle savedInstanceState) {
 }
 ```
 
-Para poder recuperarlo hemos de indicarlo desde el método *onCreateView()* (los *fragments* en vez de *onCreate* tienen ese método) con estas simples líneas.
+Para poder recuperarlo hemos de indicarlo desde el método *onCreateView()* con estas simples líneas.
 
 ```java
 public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle saveInstanceState) {
@@ -88,7 +88,7 @@ public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle sa
 
 ## Interfaces
 
-Para poder enviar los datos hemos definido que métodos se implementarán con las interfaces en el fragmento del menú por ejemplo:
+Para poder enviar los datos hemos definido qué métodos se implementarán con las interfaces en el fragmento del menú por ejemplo:
 
 ```java
 public interface FragmentoMenuListener {
@@ -98,7 +98,7 @@ public interface FragmentoMenuListener {
 }
 ```
 
-Cuando desde la actividad principal implementemos la interfaz del fragmento con `implements FragmentoMenu.FragmentoMenuListener` tendremos que sobrescribir esos métodos, como ejemplo tenemos el método que pone el nombre.
+Cuando desde la actividad principal implementemos la interfaz del fragmento con `implements FragmentoMenu.FragmentoMenuListener` tendremos que implementar esos métodos, como ejemplo tenemos el método que pone el nombre.
 
 ```java
 // llama a la segunda actividad si pulsamos el botón "PEDIR NOMBRE"
