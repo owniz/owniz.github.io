@@ -8,7 +8,7 @@ published: yes
 
 <br>
 
-Hoy os hablaré de algunos de los algoritmos que se utilizan para la ordenación de procesos y cómo aplican las preferencias para estos cada uno de ellos.
+Hoy os hablaré de algunos de los algoritmos que se utilizan para la ordenación de procesos y cómo aplican las preferencias para éstos cada uno de los distintos tipos de planificadores.
 
 # ¿Por qué la necesidad de estos?
 
