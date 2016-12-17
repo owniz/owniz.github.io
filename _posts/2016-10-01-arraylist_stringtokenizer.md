@@ -67,7 +67,7 @@ Un ejemplo para recorrer un String y mostrarlo por pantalla sería el siguiente:
 
 ```java
 StringTokenizer st = new StringTokenizer("Texto de ejemplo");
-    
+
 while (st.hasMoreTokens()) {
 	System.out.println(st.nextToken());
 }
@@ -98,63 +98,63 @@ import java.util.StringTokenizer;
 public class PruebaArrayList {
 	public static void ejercicio01() {
 		int numEquipos = 5;
-		
+
 		ArrayList<String> liga = new ArrayList<>();
 		ArrayList<String> liga2 = new ArrayList<>();
-		
+
 		System.out.println();
-		
+
 		for(int i = 0; i < numEquipos; i++) {
 			System.out.print("Dime el equipo número " + (i + 1) + ": ");
 			liga.add(Entrada.cadena());
 		}
-		
+
 		liga2 =  liga;
-		
+
 		System.out.println("\n\tArrayList liga: " + liga);
 		System.out.println("\tArrayList liga2: " + liga2);
-		
+
 		System.out.println("\n\tCantidad de valores del ArrayList liga es: " + liga.size());
-		
+
 		liga.remove(4);
 		System.out.println("\n\tPosición 4 del ArrayList liga borrado: " + liga);
-		
+
 		System.out.print("\nDime un nuevo equipo para la posición 2 del ArrayList: ");
 		String posicion2 = Entrada.cadena();
 		liga.set(2, posicion2);
 		System.out.println("\n\tPosicón 2 del ArrayList liga sustituido: " + liga);
-		
+
 		System.out.print("\nDime el equipo que esta en la posicion 3 del Arralist: ");
 		String posicion3 = Entrada.cadena();
 		liga.remove(posicion3);
 		System.out.println("\n\tArrayList liga con la posición 3 borrada: " + liga);
 	}
-	
+
 	public static ArrayList<String> ejercicio02() {
 		int numUsuario = 5;
-		
+
 		ArrayList<String> nombreEdad = new ArrayList<>();
-		
+
 		for(int i =0; i < numUsuario; i++) {
 			System.out.print("\nDime el nombre del usuario número " + (i + 1) + ": ");
 			nombreEdad.add(Entrada.cadena());
-			
+
 			System.out.print("Dime la edad del usuario número " + (i + 1) + ": ");
 			nombreEdad.add(Entrada.cadena());
 		}
 		return nombreEdad;
 	}
-	
+
 	public static void ejercicio03(ArrayList<String> nombreEdad) {
 		String datos = "";
-		
+
 		for(int i = 0; i < nombreEdad.size(); i++) {
 			if(i < (nombreEdad.size() - 1))
 				datos += nombreEdad.get(i) + ", ";
 			else
 				datos += nombreEdad.get(i);
 		}
-		
+
 		System.out.println("\n\tDatos del ArrayList separados por \", \": " + datos);
 
 		StringTokenizer token = new StringTokenizer(datos, ", ");
@@ -164,12 +164,12 @@ public class PruebaArrayList {
 			System.out.println("\t\t" + token.nextToken());
 		}
 	}
-	
+
 	public static void main(String[] args) {
 		boolean exit = false;
-		
+
 		ArrayList<String> arrayMetodoEjercicio02 = new ArrayList<>();
-		
+
 		while(!exit) {
 			System.out.println("\nElige el método");
 			System.out.println("\t(1) Método que trabaja con 2 ArrayList pidiendo nombres de equipos");
@@ -178,7 +178,7 @@ public class PruebaArrayList {
 			System.out.println("\t(4) Para salir del menú y cerrar el programa");
 			System.out.print("Opcion elegida: ");
 			int opcion = Entrada.entero();
-		
+
 			switch(opcion) {
 				case 1:
 					ejercicio01();
@@ -188,9 +188,9 @@ public class PruebaArrayList {
 					System.out.println("\n\tDatos introducidos: " + arrayMetodoEjercicio02);
 					break;
 				case 3:
-					if(arrayMetodoEjercicio02.isEmpty()) 
+					if(arrayMetodoEjercicio02.isEmpty())
 						System.out.println("\n\tPrimero llama al método 2 para rellenar el ArrayList");
-					else 
+					else
 						ejercicio03(arrayMetodoEjercicio02);
 					break;
 				case 4:
@@ -220,32 +220,32 @@ Primer método con el que trabajamos algunos de los métodos del ArrayList expli
 ```java
 public static void ejercicio01() {
 	int numEquipos = 5;
-	
+
 	ArrayList<String> liga = new ArrayList<>();
 	ArrayList<String> liga2 = new ArrayList<>();
-	
+
 	System.out.println();
-	
+
 	for(int i = 0; i < numEquipos; i++) {
 		System.out.print("Dime el equipo número " + (i + 1) + ": ");
 		liga.add(Entrada.cadena());
 	}
-	
+
 	liga2 =  liga;
-	
+
 	System.out.println("\n\tArrayList liga: " + liga);
 	System.out.println("\tArrayList liga2: " + liga2);
-	
+
 	System.out.println("\n\tCantidad de valores del ArrayList liga: " + liga.size());
-	
+
 	liga.remove(4);
 	System.out.println("\n\tPosición 4 del ArrayList liga borrado: " + liga);
-	
+
 	System.out.print("\nDime un nuevo equipo para la posición 2 del ArrayList: ");
 	String posicion2 = Entrada.cadena();
 	liga.set(2, posicion2);
 	System.out.println("\n\tosicón 2 del ArrayList liga sustituido: " + liga);
-	
+
 	System.out.print("\nDime el equipo que esta en la posicion 3 del Arralist: ");
 	String posicion3 = Entrada.cadena();
 	liga.remove(posicion3);
@@ -258,17 +258,17 @@ Este método nos devuelve un ArrayList después de rellenarlo con los datos que 
 ```java
 public static ArrayList<String> ejercicio02() {
 	int numUsuario = 5;
-	
+
 	ArrayList<String> nombreEdad = new ArrayList<>();
-		
+
 	for(int i =0; i < numUsuario; i++) {
 		System.out.print("\nDime el nombre del usuario número " + (i + 1) + ": ");
 		nombreEdad.add(Entrada.cadena());
-		
+
 		System.out.print("Dime la edad del usuario número " + (i + 1) + ": ");
 		nombreEdad.add(Entrada.cadena());
 	}
-		
+
 	return nombreEdad;
 	}
 ```
@@ -277,16 +277,16 @@ Como último método tenemos éste que hace uso del ArrayList que devuelve el an
 
 ```java
 public static void ejercicio03(ArrayList<String> nombreEdad) {
-	
+
 	String datos = "";
-		
+
 	for(int i = 0; i < nombreEdad.size(); i++) {
 			if(i < (nombreEdad.size() - 1))
 				datos += nombreEdad.get(i) + ", ";
 			else
 				datos += nombreEdad.get(i);
 	}
-		
+
 	System.out.println("\n\tDatos del ArrayList separados por \", \": " + datos);
 
 	StringTokenizer token = new StringTokenizer(datos, ", ");
@@ -303,9 +303,9 @@ Y para finalizar tenemos este pequeño menú para llamar a los métodos:
 ```java
 public static void main(String[] args) {
 	boolean exit = false;
-	
+
 	ArrayList<String> arrayMetodoEjercicio02 = new ArrayList<>();
-	
+
 	while(!exit) {
 		System.out.println("\nElige el método");
 		System.out.println("\t(1) Método que trabaja con 2 ArrayList pidiendo nombres de equipos");
@@ -314,7 +314,7 @@ public static void main(String[] args) {
 		System.out.println("\t(4) Para salir del menú y cerrar el programa");
 		System.out.print("Opcion elegida: ");
 		int opcion = Entrada.entero();
-	
+
 		switch(opcion) {
 			case 1:
 				ejercicio01();
@@ -324,9 +324,9 @@ public static void main(String[] args) {
 				System.out.println("\n\tDatos introducidos: " + arrayMetodoEjercicio02);
 				break;
 			case 3:
-				if(arrayMetodoEjercicio02.isEmpty()) 
+				if(arrayMetodoEjercicio02.isEmpty())
 					System.out.println("\n\tPrimero llama al método 2 para rellenar el ArrayList");
-				else 
+				else
 					ejercicio03(arrayMetodoEjercicio02);
 				break;
 			case 4:
@@ -342,6 +342,6 @@ public static void main(String[] args) {
 
 <br>
 
-Como viene siendo habitual os dejo mi correo electrónico de contacto [iam@jmoral.es](mailto:iam@jmoral.es "iam@jmoral.es") para que podáis escribirme si os surge alguna duda con respecto a este *post* o el código.
+Como viene siendo habitual os dejo mi correo electrónico [iam@jmoral.es](mailto:iam@jmoral.es "iam@jmoral.es") para que podáis escribirme si os surge alguna duda con respecto a este *post* o el código.
 
 Un saludo. ツ
