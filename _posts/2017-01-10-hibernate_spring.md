@@ -26,11 +26,15 @@ Mapeo objeto-relacional más conocido por sus siglas en ingles ORM es un conjunt
 orientado a objetos y bases de datos relacionales, es decir, con ORM somos capaces de transformar las tablas de una base de datos en una serie de entidades que ayudan al
 programador para poder utilizarlas.
 
+# Hibernate
+
 <img class="differentSize65" src="/assets/img/hibernate/hibernate.png" alt="Hibernate" style="margin:auto; display:block;">
 
 Sin más preámbulos y con los conceptos ya refrescados podemos ponernos en materia hablando de **Hibernate**, este *framework* ORM distribuido con una licencia [GNU LGPL](https://es.wikipedia.org/wiki/GNU_Lesser_General_Public_License "GNU LGPL (Wikipedia)") se utiliza junto con Java (aunque también hay una versión para .NET) para relacionar las bases de datos relacionales con Java (orientado a objetos), para ello *mapea* o asigna la relación a través de **archivos XML** como veremos en el ejemplo al final del *post*.
 
-<br><img class="differentSize65" src="/assets/img/hibernate/spring.png" alt="Spring" style="margin:auto; display:block;">
+# Spring
+
+<img class="differentSize65" src="/assets/img/hibernate/spring.png" alt="Spring" style="margin:auto; display:block;">
 
 Cuando trabajamos con distintos *frameworks* cada uno de ellos crea sus propios objetos por lo que necesitamos que haya cierto orden entre éstos para poder trabajar conjuntamente, para ello tenemos el *framework* **Spring**, de código libre desarrollado para Java, el cual se encarga de construir todos los objetos que vamos a necesitar y asociarlos mediante **XML** en vez de hacerlo el propio desarrollador por lo que nos aseguramos que podamos trabajar de una forma unificada, integrada y de forma correcta.
 
