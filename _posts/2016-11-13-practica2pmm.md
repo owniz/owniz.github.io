@@ -36,7 +36,7 @@ Los **callbacks** son los métodos que definimos para pasar información entre c
 
 Este método lo podemos utilizar para guardar el estado de una aplicación, por ejemplo para recuperar los datos cuando giremos el dispositivo, ya que cada vez que giramos el dispositivo todo se vuelve a inflar, estos datos los podemos recuperar desde el ***Bundle*** que tienen como parámetro los métodos *onCreate()* y *onCreateView()*.
 
-# Explicación de la práctica.
+# Explicación de la práctica
 
 <img class="inlinetwo" src="/assets/img/practica2pmm/main-movil.gif" alt="mainactivity">
 <img class="inlinetwo" src="/assets/img/practica2pmm/second-movil.gif" alt="secondactivity">
@@ -52,7 +52,7 @@ La función de esta prática es averiguar cómo podemos enviar y recibir datos e
 * Para **móvil** el recorrido es: fragmento del menú -> actividad principal -> actividad secundaria -> fragmento que pide dato.
 * Para ***tablet*** es: fragmento del menú -> actividad principal -> fragmento que pide dato.
 
-# Cómo podemos hacer esto.
+# Cómo podemos hacer esto
 
 En este *post* en vez de ir poniendo trozos de código explicando que hace cada uno me enfocaré en los cambios más significativos con respecto al de [mi primera APP](/blog/primera-app-android) ya que la gran mayoría de cosas están explicadas allí.
 
