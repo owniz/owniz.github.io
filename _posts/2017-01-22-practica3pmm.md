@@ -8,9 +8,9 @@ published: yes
 
 <br>
 
-Hola a todos, hace ya 2 meses desde mi [última práctica](/blog/segunda-app-android) en Android y casi 3 desde la [primera](/blog/primera-app-android) por lo que recomiendo que le deis un vistazo para recordar conceptos olvidados. Hoy veremos como trabajar en segundo plano gracias a la clase **AsyncTask**.
+Hola a todos, hace ya 2 meses desde mi [última práctica](/blog/segunda-app-android) en Android y casi 3 desde la [primera](/blog/primera-app-android) por lo que recomiendo que les deis un vistazo para recordar conceptos olvidados. Hoy veremos como trabajar en segundo plano gracias a la clase **AsyncTask**.
 
-Como siempre podéis dar un vistazo al código completo en [su repositorio en GitHub](https://github.com/owniz/AndroidPractise4 "GitHub") o bajaros el *apk* desde [aquí](https://github.com/owniz/AndroidPractise4/releases/download/1.0/Random_Buttons.apk).
+Cómo siempre podéis dar un vistazo al código completo en [su repositorio en GitHub](https://github.com/owniz/AndroidPractise4 "GitHub") o bajaros el *apk* desde [aquí](https://github.com/owniz/AndroidPractise4/releases/download/1.0/Random_Buttons.apk).
 
 <br>
 
@@ -22,9 +22,9 @@ Repasito rápido de conceptos antes de entrar en materia.
 
 ## **AsyncTask**
 
-Cuando nuestra aplicación debe realizar tareas que duren mucho tiempo o una cantidad de tiempo indeterminada, para que el usuario no note lentitud en la aplicación o sienta que se ha congelado (ni Android tampoco lo crea) podemos trabajar con procesos que se ejecutaran en segundo plano. Una forma de trabajar con ellos es a través de la clase **AsyncTask**.
+Cuando nuestra aplicación debe realizar tareas que duren mucho tiempo o una cantidad de tiempo indeterminado, para que el usuario no note lentitud en la aplicación o sienta que se ha congelado (ni Android tampoco lo crea) podemos trabajar con procesos que se ejecutaran en segundo plano. Una forma de trabajar con ellos es a través de la clase **AsyncTask**.
 
-## Cuadros de dialogo
+## Cuadros de diálogo
 
 La definición que nos proporciona la web de [Android Developers](https://developer.android.com/guide/topics/ui/dialogs.html?hl=es "Android Developers") es de una pequeña ventana que no ocupa toda la pantalla en la que podemos avisar al usuario de algún evento o pedirle alguna acción para poder continuar.
 
@@ -32,7 +32,7 @@ La definición que nos proporciona la web de [Android Developers](https://develo
 
 <img class="differentSize50" src="/assets/img/practica4pmm/instrucciones-animacion.gif" alt="main" style="margin:auto; display:block;">
 
-En este *.gif* podemos apreciar una pequeña animación para el título del juego y un dialogo (en este caso en concreto un **AlertDialog**), para la animación es necesario que creemos un archivo *.xml* en el que escribiremos su comportamiento, el que he utilizado yo lo podéis ver en el siguiente código:
+En este *GIF* podemos apreciar una pequeña animación para el título del juego y un diálogo (en este caso en concreto un **AlertDialog**), para la animación es necesario que creemos un archivo *XML* en el que escribiremos su comportamiento; el que he utilizado yo lo podéis ver en el siguiente código:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -63,7 +63,7 @@ En este *.gif* podemos apreciar una pequeña animación para el título del jueg
 </set>
 ```
 
-Para asignarlo a la imagen debemos utilizar el siguiente código en el método *onCreate()* por ejemplo:
+Para asignarlo a la imagen debemos utilizar el siguiente código en el método *onCreate()*:
 
 ```java
 Animation animation = AnimationUtils.loadAnimation(this, R.anim.animacion_titulo);
@@ -72,11 +72,11 @@ findViewById(R.id.imageViewTitulo).startAnimation(animation);
 
 <img class="differentSize50" src="/assets/img/practica4pmm/dialog-jugar.gif" alt="jugar" style="margin:auto; display:block;">
 
-Si pulsamos sobre **JUGAR** nos aparecerá un nuevo AlertDialog en el que podremos introducir un nombre y debemos elegir el nivel de dificultad. Este diálogo está personalizado por lo que primero debemos crear un *layout* para éste, podéis verlo [aquí](https://github.com/owniz/AndroidPractise4/blob/master/app/src/main/res/layout/dialogo_nombre_nivel.xml "GitHub"). A la hora de desarrollarlo tendrá su propia clase, que una vez más podéis ver [aquí](https://github.com/owniz/AndroidPractise4/blob/master/app/src/main/java/es/jmoral/dam2/practicaEvaluable4/dialogs/DialogoNombreNivel.java "GitHub"), en la que asignaremos que tiene que ocurrir cuando se pulse cada botón, **VOLVER** nos devolverá a la pantalla principal y con **JUGAR** empezaremos la partida.
+Si pulsamos sobre **JUGAR** nos aparecerá un nuevo **AlertDialog** en el que podremos introducir un nombre y deberemos elegir el nivel de dificultad. Este diálogo está personalizado por lo que primero debemos crear un *layout* para éste, podéis verlo [aquí](https://github.com/owniz/AndroidPractise4/blob/master/app/src/main/res/layout/dialogo_nombre_nivel.xml "GitHub"). A la hora de desarrollarlo tendrá su propia clase, que una vez más podéis ver [aquí](https://github.com/owniz/AndroidPractise4/blob/master/app/src/main/java/es/jmoral/dam2/practicaEvaluable4/dialogs/DialogoNombreNivel.java "GitHub"), en la que asignaremos qué tiene que ocurrir cuando se pulse cada botón, **VOLVER** nos devolverá a la pantalla principal y con **JUGAR** empezaremos la partida.
 
 <img class="differentSize50" src="/assets/img/practica4pmm/partida.gif" alt="partida" style="margin:auto; display:block;">
 
-Una vez hemos elegido jugar tenemos que apretar los botones en el orden correcto antes de que termine el tiempo que podemos apreciar en la *ProgressBar* justo debajo de ellos, para esto hemos trabajado con una tarea en segundo plano, que gestiona cada fase, que es una instancia de una clase aninadada que extiende de **AsyncTask** situada dentro de la clase con la actividad que muestra la partida. Como nota indicaros que lo único que se ejecuta en segundo plano es le método *doInBackground()* que es el encargado de llamar al método *onProgressUpdate()* para que vaya actualizando tanto la barra como el texto con el progreso, os dejo el código de ésta justo debajo:
+Una vez hemos elegido jugar tendremos que apretar los botones en el orden correcto antes de que termine el tiempo que podemos apreciar en la *ProgressBar* justo debajo de ellos, para esto hemos trabajado con una tarea en segundo plano, que gestiona cada fase, que es una instancia de una clase anidada que extiende de **AsyncTask** situada dentro de la clase con la actividad que muestra la partida. Como nota indicaros que lo único que se ejecuta en segundo plano es el método *doInBackground()* que es el encargado de llamar al método *onProgressUpdate()* para que vaya actualizando tanto la barra como el texto con el progreso, os dejo el código de ésta justo debajo:
 
 ```java
 // clase que gestiona el progreso del juego
@@ -178,9 +178,9 @@ Una vez hemos elegido jugar tenemos que apretar los botones en el orden correcto
 
 Una vez la barra llega al final y nos hemos quedado sin tiempo se ejecuta el método *onPostExecute()* que nos mostrará un diálogo para volver al inicio o seguir jugando.
 
-# Modo immersivo
+# Modo inmersivo
 
-Por último comentar que para poner las actividades en pantalla completa (conocido por modo immersivo) tenemos este método que tan sólo debemos llamar cuando sea necesario.
+Por último comentar que para poner las actividades en pantalla completa (conocido por modo inmersivo) tenemos este método que tan sólo debemos llamar cuando sea necesario.
 
 ```java
 public class BaseActivity extends AppCompatActivity {
@@ -206,6 +206,6 @@ public class BaseActivity extends AppCompatActivity {
 }
 ```
 
-Si tienes curiosidad por cómo está hecha alguna parte de la aplicación puedes darle un vistazo a [su repositorio en GitHub](https://github.com/owniz/AndroidPractise4 "GitHub") o preguntarme cualquier duda en mi correo [iam@jmoral.es](mailto:iam@jmoral.es "iam@jmoral.es") o en mi Twitter [@owniz](https://twitter.com/owniz "Twitter").
+Si tienes curiosidad por cómo está hecha alguna parte de la aplicación podéis darle un vistazo a [su repositorio en GitHub](https://github.com/owniz/AndroidPractise4 "GitHub") o preguntarme cualquier duda en mi correo [iam@jmoral.es](mailto:iam@jmoral.es "iam@jmoral.es") o en mi Twitter [@owniz](https://twitter.com/owniz "Twitter").
 
 Un saludo. ツ
