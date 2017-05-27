@@ -32,7 +32,7 @@ Las operaciones de arriba se consultan a través de una **URI** (Uniform Resourc
 
 <img class="differentSize40" src="/assets/img/practica5pmm/estructura.png" alt="estructura" style="margin:auto; display:block;">
 
-El proyecto está estructurado como podéis obsevar arriba, por lo que si queréis dar un vistazo a [su código](https://github.com/owniz/AndroidPractise5/tree/master/app/src/main/java/es/jmoral/dam2/practicaevaluable5 "Práctica 5") no deberíais tener problema de encontrarlo rápidamente (además está bien comentado, o eso creo <i class="fa fa-smile-o" aria-hidden="true"></i>) y así podemos dejar este *post* libre de código, o con poco, y centrarnos en las explicaciones.
+El proyecto está estructurado como podéis observar arriba, por lo que si queréis dar un vistazo a [su código](https://github.com/owniz/AndroidPractise5/tree/master/app/src/main/java/es/jmoral/dam2/practicaevaluable5 "Práctica 5") no deberíais tener problema de encontrarlo rápidamente (además está bien comentado, o eso creo <i class="fa fa-smile-o" aria-hidden="true"></i>) y así podemos dejar este *post* libre de código, o con poco, y centrarnos en las explicaciones.
 
 # Explicación de la práctica y código utilizado
 
