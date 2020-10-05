@@ -10,17 +10,19 @@ Las prácticas las realicé en Indra trabajando con VB .NET, una vez las complet
 
 Durante los últimos 3 años he trabajado con las siguientes tecnologías:
 
-* Java SE/EE
-* Java Beans
-* Struts
-* COBOL
-* JCL
-* IBM MQ
-* CICS
-* TSO - ISPF
-* SQL
-* DB2
-* SVN
+<ul>
+	<li>Java SE/EE</li>
+	<li>Java Beans</li>
+	<li>Struts</li>
+	<li>COBOL</li>
+	<li>JCL</li>
+	<li>IBM MQ</li>
+	<li>CICS</li>
+	<li>TSO - ISPF</li>
+	<li>SQL</li>
+	<li>DB2</li>
+	<li>SVN</li>
+</ul>
 
 También tengo conocimientos en: Spring Boot/MVC, Hibernate, Git, Android SDK, Python, VB .NET y PL/SQL.
 
