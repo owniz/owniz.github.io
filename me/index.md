@@ -11,7 +11,7 @@ Las prácticas las realicé en Indra trabajando con VB .NET, una vez las complet
 Durante los últimos 3 años he trabajado con las siguientes tecnologías:
 
 * Java SE/EE
-* Java Beans
+* Enterprise JavaBeans
 * Struts
 * COBOL
 * JCL
@@ -21,8 +21,9 @@ Durante los últimos 3 años he trabajado con las siguientes tecnologías:
 * SQL
 * DB2
 * SVN
+* Jira
 
-También tengo conocimientos en: Spring Boot/MVC, Hibernate, Git, Android SDK, Python, VB .NET y PL/SQL.
+También tengo conocimientos en: Spring Boot/MVC, Hibernate, Thymeleaf, Git, Android SDK, Python, VB .NET y PL/SQL.
 
 Entre mis *hobbies*, además de la informática en muchos de sus aspectos, se encuentra el salir a correr de vez en cuando, también me gustan las ~~buenas~~ historias ya sean a través de películas, cómics, libros o videojuegos, todo depende del momento y el tiempo disponible. =)
 
