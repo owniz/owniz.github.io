@@ -21,9 +21,10 @@ Durante los últimos 3 años he trabajado con las siguientes tecnologías:
 * SQL
 * DB2
 * SVN
+* GIT
 * Jira
 
-También tengo conocimientos en: Spring Boot/MVC, Hibernate, Thymeleaf, Git, Android SDK, Python, VB .NET y PL/SQL.
+También tengo conocimientos en: Spring Boot/MVC, Hibernate, JPA, Thymeleaf, Bootstrap, Android SDK, Python, VB .NET, PL/SQL, PHP y MongoDB.
 
 Entre mis *hobbies*, además de la informática en muchos de sus aspectos, se encuentra el salir a correr de vez en cuando, también me gustan las ~~buenas~~ historias ya sean a través de películas, cómics, libros o videojuegos, todo depende del momento y el tiempo disponible. =)
 
